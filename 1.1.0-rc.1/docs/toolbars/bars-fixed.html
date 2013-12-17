@@ -1,0 +1,200 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>jQuery Mobile Framework - Fixed Toolbars</title> 
+	<link rel="stylesheet"  href="../../css/themes/default/jquery.mobile.css" />  
+	<link rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
+
+	<script data-main="../../js/jquery.mobile.docs" src="../../external/requirejs/require.js"></script>
+	<script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" class="type-interior">
+
+	<div data-role="header" data-position="fixed" data-theme="f">
+		<h1>Fixed toolbars</h1>
+		<a href="../../" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+		<a href="../nav.html" data-icon="search" data-iconpos="notext" data-rel="dialog" data-transition="fade">Search</a>
+	</div>
+	
+	<div data-role="content">
+		<div class="content-primary">
+				<h2>Fixed toolbars</h2>
+				
+			    <ul data-role="controlgroup" data-type="horizontal" class="localnav">
+			      <li><a href="bars-fixed.html" data-role="button" data-transition="fade" class="ui-btn-active">Basics</a></li>
+			      <li><a href="bars-fixed-options.html" data-role="button" data-transition="fade">Options</a></li>
+			      <li><a href="bars-fixed-methods.html" data-role="button" data-transition="fade">Methods</a></li>
+			      <li><a href="bars-fixed-events.html" data-role="button" data-transition="fade">Events</a></li>
+			    </ul>
+				
+				
+		<p>In browsers that support CSS <code>position: fixed</code>, (<em>generally, most desktop browsers, iOS5+, Android 2.2+, BlackBerry 6, and more</em>), toolbars that use the "fixedtoolbar" plugin will be fixed to the top or bottom of the viewport, while the page content scrolls freely in between. In browsers that don't support fixed positioning, the toolbars will fall back to static, inline positiong in the page. </p>
+		
+		<p>To enable this behavior on a header or footer, add the <code>data-position="fixed"</code> attribute to a jQuery Mobile header or footer element.</p>
+		
+		<p>Fixed header markup example:</p>
+		<pre><code>	
+&lt;div data-role=&quot;header&quot; <strong>data-position=&quot;fixed&quot;</strong>&gt;
+	&lt;h1&gt;Fixed Header!&lt;/h1&gt;
+&lt;/div&gt;
+		</code></pre>
+		
+		<p>Fixed footer markup example:</p>
+		<pre><code>	
+&lt;div data-role=&quot;footer&quot; <strong>data-position=&quot;fixed&quot;</strong>&gt;
+	&lt;h1&gt;Fixed Footer!&lt;/h1&gt;
+&lt;/div&gt;
+		</code></pre>
+
+		<h2>Forms in toolbars</h2>
+		<p>In jQuery Mobile 1.1, all form element are now tested to work correctly in toolbars and a more compact <a href="../forms/forms-all-mini.html">mini sized</a> version is recommended for use in toolbars. The following pages are designed to test fixed toolbars and form elements: 
+			<a href="bars-fixed-forms-a.html">demo app</a>,
+			<a href="bars-fixed-forms-b.html">text inputs</a>, 
+			<a href="bars-fixed-forms-c.html">search inputs</a>, 
+			<a href="bars-fixed-forms-d.html">radio toggles</a>, 
+			<a href="bars-fixed-forms-e.html">checkbox toggles</a>,
+			<a href="bars-fixed-forms-f.html">slider</a>, 
+			<a href="bars-fixed-forms-g.html">select</a>, and  
+			<a href="bars-fixed-forms-h.html">buttons</a>.
+		</p>
+		<p>Note that the interaction of fixed toolbars and the on-screen keyboard used on many mobile platforms can cause issues when these interact so we recommend avoiding the use of text inputs or other elements that open the keyboard in footers.</p>
+		
+		<h2>Fullscreen Toolbars</h2>
+		<p>Fullscreen fixed toolbars sit on top of the content at all times when they are visible, and unlike regular fixed toolbars, fullscreen toolbars do not fall back to static positioning when toggled, instead they disappear from the screen entirely. Fullscreen toolbars are ideal for more immersive interfaces, like a photo viewer that is meant to fill the entire screen with the photo itself and no distractions. <a href="bars-fullscreen.html">This page</a> demonstrates toolbars that use the fullscreen option.</p>
+		
+				<p>To enable this option on a fixed header or footer, add the <code>data-fullscreen</code> attribute to the element.</p>
+		
+				<pre><code>	
+&lt;div data-role=&quot;header&quot; data-position=&quot;fixed&quot; data-fullscreen=&quot;true&quot;&gt;
+	&lt;h1&gt;Fixed Header!&lt;/h1&gt;
+&lt;/div&gt;
+				</code></pre>
+		
+		
+	
+		<h2>Changes in jQuery Mobile 1.1</h2>
+		
+		<p>Prior to version 1.1, jQuery Mobile used dynamically re-positioned toolbars for the fixed header effect because very few mobile browsers supported the <code>position:fixed</code> CSS property, and simulating fixed support through the use of "fake" JavaScript overflow-scrolling behavior would have reduced our browser support reach, in addition to feeling unnatural on certain platforms. This behavior was not ideal, and jQuery Mobile 1.1 took a new approach to fixed toolbars that allows much broader support, and now the framework offers true fixed toolbars on many popular platforms, while gracefully degrading non-supporting platforms to static positioning.</p>
+		
+<div class="ui-body ui-body-e">		
+		<h2>No longer supported: touchOverflowEnabled</h2>
+		
+		<p>Prior to jQuery Mobile 1.1, true fixed toolbar support was contingent on native browser support for the CSS property <code>overflow-scrolling: touch</code>, which is currently only supported in iOS5. As of version 1.1, jQuery Mobile no longer uses this CSS property at all. We've removed all internal usage of this property in the framework, but we've left it defined globally on the $.mobile object to reduce the risk that its removal will cause trouble with existing applications. This property is flagged for removal, so please update your code to no longer use it. The support test for this property, however, remains defined under <code>$.support</code> and we have no plans to remove that test at this time. </p>
+</div>
+		<hr>
+	
+		
+		<h2>The rest of the page is just sample content to make the page very long</h2>
+		
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
+			
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
+			
+			
+			<h3>And an inset list</h3>
+			
+					<ul data-role="listview" data-inset="true">
+						<li><a href="index.html">Inbox <span class="ui-li-count">12</span></a></li>
+						<li><a href="index.html">Outbox <span class="ui-li-count">0</span></a></li>
+						<li><a href="index.html">Drafts <span class="ui-li-count">4</span></a></li>
+						<li><a href="index.html">Sent <span class="ui-li-count">328</span></a></li>
+						<li><a href="index.html">Trash <span class="ui-li-count">62</span></a></li>
+					</ul>
+			
+			<br />
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
+			
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
+			
+			
+			<h3>Embedded form</h3>
+			
+			<form action="#" method="get">
+
+				<div data-role="fieldcontain">
+		         <label for="name">Text Input:</label>
+		         <input type="text" name="name" id="name" value=""  />
+				</div>
+
+				<div data-role="fieldcontain">
+				<label for="textarea">Textarea:</label>
+				<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="slider2">Flip switch:</label>
+					<select name="slider2" id="slider2" data-role="slider">
+						<option value="off">Off</option>
+						<option value="on">On</option>
+					</select>
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="slider">Slider:</label>
+				 	<input type="range" name="slider" id="slider" value="0" min="0" max="100"  />
+				</div>
+
+
+				<div data-role="fieldcontain">
+					<label for="select-choice-1" class="select">Choose shipping method:</label>
+					<select name="select-choice-1" id="select-choice-1">
+						<option value="standard">Standard: 7 day</option>
+						<option value="rush">Rush: 3 days</option>
+						<option value="express">Express: next day</option>
+						<option value="overnight">Overnight</option>
+					</select>
+				</div>
+
+
+			<div class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+					<div class="ui-block-a"><button type="submit" data-theme="d">Cancel</button></div>
+					<div class="ui-block-b"><button type="submit" data-theme="b">Submit</button></div>
+		    </fieldset>
+			</div>
+		</form>
+		
+		<h3>A bit more text</h3>
+		
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
+		
+
+
+
+				</div><!--/content-primary -->		
+
+				<div class="content-secondary">
+
+					<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="d">
+
+							<h3>More in this section</h3>
+
+							<ul data-role="listview" data-theme="c" data-dividertheme="d">
+
+								<li data-role="list-divider">Toolbars</li>
+								<li><a href="docs-bars.html">Toolbar basics</a></li>
+								<li><a href="docs-headers.html">Header bars</a></li>
+								<li><a href="docs-footers.html">Footer bars</a></li>
+								<li><a href="docs-navbar.html">Navbars</a></li>
+								<li data-theme="a"><a href="bars-fixed.html">Fixed positioning</a></li>
+								<li><a href="footer-persist-a.html">Persistent toolbars</a></li>
+								<li><a href="bars-themes.html">Theming toolbars</a></li>
+
+							</ul>
+					</div>
+				</div>		
+
+			</div><!-- /content -->
+
+			<div data-role="footer" class="footer-docs" data-theme="a" data-position="fixed">
+					<h1>Fixed Footer</h1>
+			</div>
+
+			</div><!-- /page -->
+
+			</body>
+			</html>
