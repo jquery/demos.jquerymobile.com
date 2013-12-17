@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Collapsible listview - jQuery Mobile Demos</title>
+	<link rel="stylesheet"  href="../../../css/themes/default/jquery.mobile-1.3.0.css">
+	<link rel="stylesheet" href="../../_assets/css/jqm-demos.css">
+	<link rel="shortcut icon" href="../../_assets/favicon.ico">
+
+	<script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="../../_assets/js/jqm-demos.js"></script>
+	<script src="../../../js/jquery.mobile-1.3.0.js"></script>
+	<style>
+		#demo-borders .ui-collapsible .ui-collapsible-heading .ui-btn { border-top-width: 1px !important; }
+	</style>
+</head>
+<body>
+<div data-role="page">
+
+	<div data-role="header" class="jqm-header">
+		<h1>Collapsible listview</h1>
+		<a href="#" class="jqm-search-link" data-icon="search" data-iconpos="notext">Search</a>
+		
+<div class="jqm-search">
+    <ul class="jqm-list">
+        
+<li data-section="Widgets" data-filtertext="accordions collapsible sets content formatting"><a href="widgets/accordions/">Accordion</a></li>
+
+<li data-section="Widgets" data-filtertext="ajax navigation"><a href="widgets/navigation/">AJAX Navigation</a></li>
+
+<li data-section="Widgets" data-filtertext="autocomplete filter reveal listviews"><a href="widgets/autocomplete/" data-ajax="false">Autocomplete</a></li>
+
+<li data-section="Widgets" data-filtertext="buttons inputs forms"><a href="widgets/buttons/" data-ajax="false">Buttons</a></li>
+
+<li data-section="Widgets" data-filtertext="checkboxes checkboxradio inputs forms"><a href="widgets/checkbox/">Checkboxes</a></li>
+
+<li data-section="Widgets" data-filtertext="collapsibles content formatting"><a href="widgets/collapsibles/" data-ajax="false">Collapsibles</a></li>
+
+<li data-section="Widgets" data-filtertext="controlgroups selects checkboxradio buttons"><a href="widgets/controlgroups/">Controlgroup</a></li>
+
+<li data-section="Widgets" data-filtertext="dialogs modal popups"><a href="widgets/dialog/">Dialogs</a></li>
+
+<li data-section="Widgets" data-filtertext="fixed toolbars headers footers sections"><a href="widgets/headers/bars-fixed.html">Fixed toolbars</a></li>
+
+<li data-section="Widgets" data-filtertext="flip toggle switch flip switch toggle slider selects forms"><a href="widgets/sliders/switch.html" data-ajax="false">Flip switch toggle</a></li>
+
+<li data-section="Widgets" data-filtertext="footer toolbars footers sections"><a href="widgets/footers/">Footer toolbar</a></li>
+
+<li data-section="Widgets" data-filtertext="form elements inputs forms fieldcontains field containers"><a href="widgets/forms/">Form elements</a></li>
+
+<li data-section="Widgets" data-filtertext="grids grid blocks content formatting rwd responsive"><a href="widgets/grids/">Grids</a></li>
+
+<li data-section="Widgets" data-filtertext="header toolbars headers sections"><a href="widgets/headers/">Header toolbar</a></li>
+
+<li data-section="Widgets" data-filtertext="icons buttons"><a href="widgets/icons/">Icon</a></li>
+
+<li data-section="Widgets" data-filtertext="links linking navigation ajax"><a href="widgets/links/">Links</a></li>
+
+<li data-section="Widgets" data-filtertext="listviews lists ul ol"><a href="widgets/listviews/" data-ajax="false">Listviews</a></li>
+
+<li data-section="Widgets" data-filtertext="loader overlay loading pages"><a href="widgets/loader/">Loader overlay</a></li>
+
+<li data-section="Widgets" data-filtertext="navbars navmenu toolbars"><a href="widgets/navbar/" data-ajax="false">Navbar</a></li>
+
+<li data-section="Widgets" data-filtertext="navbar, persistent navbars persistent header persistent footer persistent navmenu"><a href="widgets/navbar/footer-persist-a.html">Navbar, persistent</a></li>
+
+<li data-section="Widgets" data-filtertext="pages single page templates multipage templates multi-page templates"><a href="widgets/pages/">Pages</a></li>
+
+<li data-section="Widgets" data-filtertext="panels slide panels sliding panels rwd responsive"><a href="widgets/panels/">Panels <span class="ui-li-count">New</span></a></li>
+
+<li data-section="Widgets" data-filtertext="popup dialog modal"><a href="widgets/popup/">Popup</a></li>
+
+<li data-section="Widgets" data-filtertext="radiobuttons radio buttons checkboxradio inputs forms"><a href="widgets/radiobuttons/">Radio buttons</a></li>
+
+<li data-section="Widgets" data-filtertext="selectmenus custom select menus native selects multiple selects forms"><a href="widgets/selects/">Select</a></li>
+
+<li data-section="Widgets" data-filtertext="slider, single sliders range inputs forms"><a href="widgets/sliders/" data-ajax="false">Slider, single</a></li>
+
+<li data-section="Widgets" data-filtertext="slider, dual range sliders rangesliders inputs forms"><a href="widgets/sliders/rangeslider.html" data-ajax="false">Slider, dual range <span class="ui-li-count">New</span></a></li>
+
+<li data-section="Widgets" data-filtertext="table, column toggle tables responsive tables rwd responsive"><a href="widgets/table-column-toggle/">Table, column toggle <span class="ui-li-count">New</span></a></li>
+
+<li data-section="Widgets" data-filtertext="table, reflow tables responsive tables rwd responsive"><a href="widgets/table-reflow/">Table, reflow <span class="ui-li-count">New</span></a></li>
+
+<li data-section="Widgets" data-filtertext="text inputs & textarea textinputs forms"><a href="widgets/textinputs/">Text inputs & textarea</a></li>
+
+<li data-section="Widgets" data-filtertext="page transitions pages navigation" data-ajax="false"><a href="widgets/transitions/" data-ajax="false">Transitions</a></li>
+        
+<li data-role="list-divider">Collapsibles</li>
+
+<li data-section="Demo Showcase" data-filtertext="dyncamic collapsible set accordion"><a href="examples/collapsibles/dynamic-collapsible.html" data-ajax="false">Dynamic collapsible</a></li>
+
+<li data-role="list-divider">Controlgroups</li>
+
+<li data-section="Demo Showcase" data-filtertext="dynamic controlgroup buttons selects checkboxes"><a href="examples/controlgroups/dynamic-controlgroup.html" data-ajax="false">Dynamic controlgroup</a></li>
+
+<li data-role="list-divider">Listviews</li>
+
+<li data-section="Demo Showcase" data-filtertext="grid listview responsive grids responsive listviews lists ul"><a href="examples/listviews/grid-listview.html" data-ajax="false">Grid Listview</a></li>
+
+<li data-section="Demo Showcase" data-filtertext="autodividers linkbars listviews lists ul"><a href="examples/listviews/autodividers-linkbar.html" data-ajax="false">Autodividers Linkbar</a></li>
+
+<li data-section="Demo Showcase" data-filtertext="autodividers selector autodividersselector listviews lists ul ol"><a href="examples/listviews/autodividers-selector.html" data-ajax="false">Autodividers Selector</a></li>
+
+<li data-role="list-divider">Navigation</li>
+
+<li data-section="Demo Showcase" data-filtertext="backbone and require.js example navigation router"><a href="examples/backbone-require/index.html" data-ajax="false">Backbone and Require.js example</a></li>
+
+<li data-section="Demo Showcase" data-filtertext="server redirection with server-side support.html"><a href="examples/redirect/index.php" data-ajax="false">Redirection with server-side support</a></li>
+
+<li data-role="list-divider">Panels</li>
+
+<li data-section="Demo Showcase" data-filtertext="panel styling slide panels sliding panels"><a href="examples/panels/panel-styling.html" data-ajax="false">Panel styling</a></li>
+
+<li data-section="Demo Showcase" data-filtertext="open panel on swipe panels"><a href="examples/panels/panel-swipe-open.html" data-ajax="false">Open panel on swipe</a></li>
+
+<li data-role="list-divider">Popups</li>
+
+<li data-section="Demo Showcase" data-filtertext="dynamic popups popup images"><a href="examples/popups/dynamic-popup.html" data-ajax="false">Dynamic popup</a></li>
+
+<li data-section="Demo Showcase" data-filtertext="arrow popups popup"><a href="examples/popups/arrow.html" data-ajax="false">Popup with arrow</a></li>
+
+<li data-role="list-divider">Responsive Tables</li>
+
+<li data-section="Demo Showcase" data-filtertext="responsive tables table reflow: custom styles"><a href="examples/tables/movie-list.html" data-ajax="false">Reflow: Custom styles</a></li>
+
+<li data-section="Demo Showcase" data-filtertext="responsive tables table reflow: heading groups"><a href="examples/tables/financial-grouped-reflow.html" data-ajax="false">Reflow: Heading groups</a></li>
+
+<li data-section="Demo Showcase" data-filtertext="responsive tables table column toggle: customization options"><a href="examples/tables/movie-list-toggle-options.html" data-ajax="false">Column toggle: Customization options</a></li>
+
+<li data-section="Demo Showcase" data-filtertext="responsive tables table column toggle: heading groups"><a href="examples/tables/financial-grouped-columns.html" data-ajax="false">Column toggle: Heading groups</a></li>
+
+<li data-section="Demo Showcase" data-filtertext="responsive tables table column toggle demo: phone comparison"><a href="examples/tables/phone-compare.html" data-ajax="false">Column toggle demo: Phone comparison</a></li>
+
+<li data-role="list-divider">Sliders</li>
+
+<li data-section="Demo Showcase" data-filtertext="slider tooltip extension input range sliders forms"><a href="examples/slider/tooltip.html" data-ajax="false">Tooltip extension</a></li>
+
+<li data-role="list-divider">Swipe</li>
+
+<li data-section="Demo Showcase" data-filtertext="swipe to navigate page transitions navigation"><a href="examples/swipe/swipe-page.html" data-ajax="false">Swipe to navigate</a></li>
+
+<li data-section="Demo Showcase" data-filtertext="swipe to delete list item listviews lists ul ol"><a href="examples/swipe/swipe-list.html" data-ajax="false">Swipe to delete list item</a></li>
+        
+<li data-role="list-divider">Forms</li>
+
+<li data-section="Questions & Answers" data-filtertext="CSS styles apply widget scope wrap"><a href="faq/question-template.html">Why won't my CSS styles apply correctly to a widget?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="form update value enhance"><a href="faq/updating-the-value-of-enhanced-form-elements-does-not-work.html">Updating the value of enhanced form elements does not work.</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="HTML 5 inputs appearance picker calendar date time slider"><a href="faq/my-html-5-inputs-look-different-in-browsers.html">My HTML 5 inputs look different across devices and browsers.</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="range search inputs slider number text degrade"><a href="faq/my-range-search-input-type-is-being-changed.html">My range or search inputs are being change to number/text.</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="custom select popup dialog logic"><a href="faq/sometimes-custom-select-shows-as-dialog-popup.html">Sometimes my custom select shows as a popup other times its a dialog.</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="disable button issue class method"><a href="faq/disabling-a-button-does-not-work.html">Disabling a button does not work.</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="fixed header footer toolbar select input bug issue"><a href="faq/controls-in-header-footer.html">Controls in my fixed header or footer are not responding or behave erratically.</a></li>
+
+<li data-role="list-divider">Pages</li>
+
+<li data-section="Questions & Answers" data-filtertext="head load scripts styles issue ajax nav pages"><a href="faq/scripts-and-styles-not-loading.html">Why aren't my scripts and styles loading?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="document.ready onload paginit DOM ready on ready scripts "><a href="faq/dom-ready-not-working.html">Why isn't DOM ready working for my scripts?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="ajax nav load page mobile.loadpage"><a href="faq/how-do-i-load-a-page.html">How do I load a page?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="ajax nav multi page document load"><a href="faq/why-is-only-the-first-page-loaded.html">Why is only the first page of my multi page document loaded?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="pass url query params"><a href="faq/pass-query-params-to-page.html">I'm trying to pass query params to a page but it's not working?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="hash pass information parameters ajax nav"><a href="faq/pass-via-the-hash-to-page.html">I'm trying to pass information via the hash but it's not working?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="I'm trying to use the application cache but it's not working?"><a href="faq/the-application-cache-is-not-working.html">I'm trying to use the application cache but it's not working?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="Content injected into a page is not enhanced."><a href="faq/injected-content-is-not-enhanced.html">Content injected into a page is not enhanced.</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="Triggering create on injected HTML does not work."><a href="faq/triggering-create-on-injected-content-does-not-work.html">Triggering create on injected HTML does not work.</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="How can I stop JQM from auto-enhancing an element?"><a href="faq/how-can-i-stop-auto-enhancement-of-elements.html">How can I stop JQM from auto-enhancing an element?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="How can I stop JQM from enhancing a block of elements?"><a href="faq/how-can-i-stop-auto-enhancement-of-a-block-of-elements.html">How can I stop JQM from enhancing a block of elements?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="How do I control page titles?"><a href="faq/how-do-i-control-page-titles.html">How do I control page titles?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext="How do I load a page?"><a href="faq/how-do-i-load-a-page.html">How do I load a page?</a></li>
+
+<li data-role="list-divider">Events</li>
+
+<li data-section="Questions & Answers" data-filtertext="How do I use touch and mouse events?"><a href="faq/how-do-i-use-touch-mouse-events.html">How do I use touch and mouse events?</a></li>
+
+<li data-role="list-divider">Apps</li>
+
+<li data-section="Questions & Answers" data-filtertext="How do I need to configure PhoneGap Cordova?"><a href="faq/how-configure-phonegap-cordova.html">How do I need to configure PhoneGap/Cordova?</a></li>
+<!--
+<li data-role="list-divider">Navigation</li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/nav-is-acting-erraticly.html">The nav is acting erratically!</a></li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/deep-links-dont-work.html">Following a deep link ( a link to scroll to and id ) does not work.</a></li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/scripts-css-only-works-on-first-page-or-refresh.html">My script / css only works on first page or on refresh.</a></li>
+<li data-role="list-divider">Widgets</li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/cloned-content-double-enhanced.html">Cloning a widget or enhanced for element and enhancing causes "double" enhancement</a></li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/cloned-content-does-not-update.html">Cloned widget or enhanced element does not update</a></li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/data-enhance-false-does-not-work.html">Setting data-enhance="false" does not work.</a></li>
+
+<li data-role="list-divider">General</li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/selecting-element-by-id-not-working.html">Selecting elements by id only works sometimes or on first page!</a></li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/global-config-settings-ignored.html">The global configuration settings i set are being ignored.</a></li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/custom-css-is-ignored.html">My custom css is ignored.</a></li>
+
+<li data-role="list-divider">Events</li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/swipe-triggered-when-scrolling.html">Swipe triggered when scrolling.</a></li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/document-ready-not-working.html">Document ready ignored after first page.</a></li>
+
+<li data-role="list-divider">Theming &amp; custom styles</li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/#">How do I add custom icons?</a></li>
+
+<li data-section="Questions & Answers" data-filtertext=""><a href="faq/#">How do I add remove the circle behind the icons?</a></li>
+-->
+    </ul>
+</div>
+	</div><!-- /header -->
+
+	<div data-role="content" class="jqm-content">
+
+			<h2>Inset, individual collapsible</h2>
+
+			<div data-demo-html="true">
+				<div data-role="collapsible" data-theme="b" data-content-theme="c">
+					<h2>Choose a car model...</h2>
+					<ul data-role="listview">
+						<li><a href="#">Acura</a></li>
+						<li><a href="#">Audi</a></li>
+						<li><a href="#">BMW</a></li>
+						<li><a href="#">Cadillac</a></li>
+						<li><a href="#">Chrysler</a></li>
+						<li><a href="#">Dodge</a></li>
+						<li><a href="#">Ferrari</a></li>
+						<li><a href="#">Ford</a></li>
+						<li><a href="#">GMC</a></li>
+						<li><a href="#">Honda</a></li>
+						<li><a href="#">Hyundai</a></li>
+						<li><a href="#">Infiniti</a></li>
+						<li><a href="#">Jeep</a></li>
+						<li><a href="#">Kia</a></li>
+						<li><a href="#">Lexus</a></li>
+						<li><a href="#">Mini</a></li>
+						<li><a href="#">Nissan</a></li>
+						<li><a href="#">Porsche</a></li>
+						<li><a href="#">Subaru</a></li>
+						<li><a href="#">Toyota</a></li>
+						<li><a href="#">Volkswagen</a></li>
+						<li><a href="#">Volvo</a></li>
+					</ul>
+				</div><!-- /collapsible -->
+			</div><!--/demo-html -->
+
+			<h2>Inset, collapsible set</h2>
+
+			<div data-demo-html="true">
+				<div data-role="collapsible-set" data-theme="b" data-content-theme="d">
+					<div data-role="collapsible">
+						<h2>Filtered list</h2>
+						<ul data-role="listview" data-filter="true" data-filter-theme="c" data-divider-theme="d">
+							<li><a href="#">Adam Kinkaid</a></li>
+							<li><a href="#">Alex Wickerham</a></li>
+							<li><a href="#">Avery Johnson</a></li>
+							<li><a href="#">Bob Cabot</a></li>
+							<li><a href="#">Caleb Booth</a></li>
+						</ul>
+					</div><!-- /collapsible -->
+					<div data-role="collapsible">
+						<h2>Formatted text</h2>
+						<ul data-role="listview" data-theme="d" data-divider-theme="d">
+							<li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
+							<li><a href="#">
+								<h3>Stephen Weber</h3>
+								<p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+								<p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+								<p class="ui-li-aside"><strong>6:24</strong>PM</p>
+							</a></li>
+							<li><a href="#">
+								<h3>jQuery Team</h3>
+								<p><strong>Boston Conference Planning</strong></p>
+								<p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+								<p class="ui-li-aside"><strong>9:18</strong>AM</p>
+							</a></li>
+						</ul>
+					</div><!-- /collapsible -->
+					<div data-role="collapsible">
+						<h2>Thumbnails and split button</h2>
+						<ul data-role="listview" data-split-icon="gear" data-split-theme="d">
+							<li><a href="#">
+								<img src="../../_assets/img/album-bb.jpg" />
+								<h3>Broken Bells</h3>
+								<p>Broken Bells</p>
+								</a><a href="#">Purchase album
+							</a></li>
+							<li><a href="#">
+								<img src="../../_assets/img/album-hc.jpg" />
+								<h3>Warning</h3>
+								<p>Hot Chip</p>
+								</a><a href="#">Purchase album
+							</a></li>
+							<li><a href="#">
+								<img src="../../_assets/img/album-p.jpg" />
+								<h3>Wolfgang Amadeus Phoenix</h3>
+								<p>Phoenix</p>
+								</a><a href="#">Purchase album
+							</a></li>
+						</ul>
+					</div><!-- /collapsible -->
+				</div><!-- /collapsible-set -->
+			</div><!--/demo-html -->
+
+			<h2>Non-inset, collapsible set</h2>
+
+			<div data-demo-html="true">
+				<div data-role="collapsible-set" data-theme="b" data-content-theme="d" data-inset="false">
+					<div data-role="collapsible">
+						<h2>Mailbox</h2>
+						<ul data-role="listview">
+							<li><a href="#">Inbox <span class="ui-li-count">12</span></a></li>
+							<li><a href="#">Outbox <span class="ui-li-count">0</span></a></li>
+							<li><a href="#">Drafts <span class="ui-li-count">4</span></a></li>
+							<li><a href="#">Sent <span class="ui-li-count">328</span></a></li>
+							<li><a href="#">Trash <span class="ui-li-count">62</span></a></li>
+						</ul>
+					</div><!-- /collapsible -->
+					<div data-role="collapsible">
+						<h2>Calendar</h2>
+						<ul data-role="listview" data-theme="d" data-divider-theme="d">
+							<li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
+							<li><a href="#">
+								<h3>Stephen Weber</h3>
+								<p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+								<p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+								<p class="ui-li-aside"><strong>6:24</strong>PM</p>
+							</a></li>
+							<li><a href="#">
+								<h3>jQuery Team</h3>
+								<p><strong>Boston Conference Planning</strong></p>
+								<p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+								<p class="ui-li-aside"><strong>9:18</strong>AM</p>
+							</a></li>
+							<li data-role="list-divider">Thursday, October 7, 2010 <span class="ui-li-count">1</span></li>
+							<li><a href="#">
+								<h3>Avery Walker</h3>
+								<p><strong>Re: Dinner Tonight</strong></p>
+								<p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait! </p>
+								<p class="ui-li-aside"><strong>4:48</strong>PM</p>
+							</a></li>
+							<li data-role="list-divider">Wednesday, October 6, 2010 <span class="ui-li-count">3</span></li>
+							<li><a href="#">
+								<h3>Amazon.com</h3>
+								<p><strong>4-for-3 Books for Kids</strong></p>
+								<p>As someone who has purchased children's books from our 4-for-3 Store, you may be interested in these featured books.</p>
+								<p class="ui-li-aside"><strong>12:47</strong>PM</p>
+							</a></li>
+						</ul>
+					</div><!-- /collapsible -->
+					<div data-role="collapsible">
+						<h2>Contacts</h2>
+						<ul data-role="listview" data-autodividers="true" data-theme="d" data-divider-theme="d">
+							<li><a href="#">Adam Kinkaid</a></li>
+							<li><a href="#">Alex Wickerham</a></li>
+							<li><a href="#">Avery Johnson</a></li>
+							<li><a href="#">Bob Cabot</a></li>
+							<li><a href="#">Caleb Booth</a></li>
+							<li><a href="#">Christopher Adams</a></li>
+							<li><a href="#">Culver James</a></li>
+						</ul>
+					</div><!-- /collapsible -->
+				</div><!-- /collapsible-set -->
+			</div><!--/demo-html -->
+
+			<h2>Non-inset, individual collapsibles</h2>
+
+			<p>This is an example of a series of individual collapsibles that are full width (non-inset) with listviews inside. Multiple collapsible rows can be open at once since each is an individual collapsible. Here, each collapsible also has a custom icon.</p>
+
+			<div data-demo-html="true">
+				<div data-role="collapsible" data-theme="b" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-inset="false">
+					<h2>Pets</h2>
+					<ul data-role="listview">
+						<li><a href="#">Canary</a></li>
+						<li><a href="#">Cat</a></li>
+						<li><a href="#">Dog</a></li>
+						<li><a href="#">Gerbil</a></li>
+						<li><a href="#">Iguana</a></li>
+						<li><a href="#">Mouse</a></li>
+					</ul>
+				</div><!-- /collapsible -->
+				<div data-role="collapsible" data-theme="b" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-inset="false">
+					<h2>Farm animals</h2>
+					<ul data-role="listview">
+						<li><a href="#">Chicken</a></li>
+						<li><a href="#">Cow</a></li>
+						<li><a href="#">Duck</a></li>
+						<li><a href="#">Horse</a></li>
+						<li><a href="#">Pig</a></li>
+						<li><a href="#">Sheep</a></li>
+					</ul>
+				</div><!-- /collapsible -->
+				<div data-role="collapsible" data-theme="b" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-inset="false">
+					<h2>Wild Animals</h2>
+					<ul data-role="listview">
+						<li><a href="#">Aardvark</a></li>
+						<li><a href="#">Alligator</a></li>
+						<li><a href="#">Ant</a></li>
+						<li><a href="#">Bear</a></li>
+						<li><a href="#">Beaver</a></li>
+						<li><a href="#">Cougar</a></li>
+						<li><a href="#">Dingo</a></li>
+					</ul>
+				</div><!-- /collapsible -->
+			</div><!--/demo-html -->
+
+			<p>To avoid "double" borders the framework removes the top border of collapsibles that are immediately preceded by another collapsible. Here we show how to negate this with custom CSS.</p>
+
+			<div data-demo-html="true" data-demo-css="true">
+				<div id="demo-borders">
+					<div data-role="collapsible" data-theme="b" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-inset="false">
+						<h2>Pets</h2>
+						<ul data-role="listview">
+							<li><a href="#">Canary</a></li>
+							<li><a href="#">Cat</a></li>
+							<li><a href="#">Dog</a></li>
+							<li><a href="#">Gerbil</a></li>
+							<li><a href="#">Iguana</a></li>
+							<li><a href="#">Mouse</a></li>
+						</ul>
+					</div><!-- /collapsible -->
+					<div data-role="collapsible" data-theme="e" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-inset="false">
+						<h2>Farm animals</h2>
+						<ul data-role="listview">
+							<li><a href="#">Chicken</a></li>
+							<li><a href="#">Cow</a></li>
+							<li><a href="#">Duck</a></li>
+							<li><a href="#">Horse</a></li>
+							<li><a href="#">Pig</a></li>
+							<li><a href="#">Sheep</a></li>
+						</ul>
+					</div><!-- /collapsible -->
+				</div>
+			</div><!--/demo-html -->
+
+	</div><!-- /content -->
+
+	<div data-role="footer" class="jqm-footer">
+		<p class="jqm-version"></p>
+		<p>Copyright 2013 The jQuery Foundation</p>
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+</body>
+</html>
