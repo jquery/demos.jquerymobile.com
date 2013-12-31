@@ -1,4 +1,4 @@
-(function( $, undefined ) {	
+(function( $, undefined ) {
 	$( document ).on( "mobileinit", function(){
 		$.widget( "mobile.listview", $.mobile.listview, {
 			options: {
@@ -17,15 +17,24 @@
 			},
 			_create: function(){
 				this._super();
-				if ( this.options.globalNav ){
+				if ( this.options.globalNav ) {
 					this._globalnav();
 				}
 			},
-			_globalnav: function(){
-				var base = $( "base" ).attr( "href" ).split('demos')[0],
-					base = base.split('index.html')[0] + this.options.globalNav + "/";
-					
-				this.element.find( "a" ).each(function() {
+			_globalnav: function() {
+				var version, base,
+					parts = $( "base" ).attr( "href" ).split( "/" ),
+					versionString = /^[0-9]\.[0-9]\.[0-9]/;
+
+				parts.forEach( function( part ){
+					if ( versionString.test( part ) ){
+						base = $( "base" ).attr( "href" )
+							.split( part )[ 0 ]
+							.split( "index.html" )[0] + part + "/";
+					}
+				});
+
+				this.element.find( "a" ).each( function() {
 					var href = base + $( this ).attr( "href" );
 					$( this ).attr( "href", href );
 				});
