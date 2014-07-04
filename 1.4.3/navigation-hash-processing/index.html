@@ -38,6 +38,16 @@ $.mobile.document
 
 				data.options.allowSamePageTransition = true;
 		}
+		// Add .ui-btn-active class only to anchor with href
+		// that matches hash
+		if ( $.type( data.absUrl ) !== "undefined" ) {
+			// Remove .ui-btn-active from all anchors wihtin #secondary-page
+			$( "#secondary-page .ui-content .ui-btn-active" )
+			.removeClass( "ui-btn-active" );
+			// Add .ui-btn-active to button with href matching hash
+			$( "#secondary-page" ).find( ".ui-btn[href='" + $.mobile.path.parseUrl(data.absUrl).hash + "']" )
+			.addClass( "ui-btn-active" );
+		}
 	})
 	.on( "pagecontainerbeforetransition", function( event, data ) {
 		var queryParameters = {},
