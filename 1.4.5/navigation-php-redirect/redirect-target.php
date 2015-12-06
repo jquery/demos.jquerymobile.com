@@ -9,9 +9,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile-1.4.5.min.css">
-  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-  <script src="http://code.jquery.com/mobile/latest/jquery.mobile.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/latest/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="https://code.jquery.com/mobile/latest/jquery.mobile.js"></script>
 
 </head>
 <body>
