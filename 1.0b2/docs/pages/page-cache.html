@@ -1,17 +1,17 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 	<head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>jQuery Mobile Docs - Preload & cache pages</title> 
-	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile Docs - Preload & cache pages</title>
+	<link rel="stylesheet"  href="https://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
 	<link rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
-	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
 	<script src="../../experiments/themeswitcher/jquery.mobile.themeswitcher.js"></script>
 	<script src="../_assets/js/jqm-docs.js"></script>
-	<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
-</head> 
-<body> 
+	<script src="https://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+</head>
+<body>
 
 	<div data-role="page" class="type-interior">
 
@@ -21,23 +21,23 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<div class="content-primary">		
-			
-			
+		<div class="content-primary">
+
+
 			<h2>Pre-fetching pages</h2>
-		
+
 			<p>If you're using a single page template, but would prefer to lazy load in a few key pages in the background to avoid seeing the Ajax loader, we recommend using the pre-fetch feature instead of moving to a multi-page template. To pre-fetch a page, simply add the <code>data-prefetch</code> attribute to any link and jQuery Mobile will lazy load this page in the background after the primary page has loaded. Here's an example:</p>
-			
+
 <pre><code>
  &lt;a href="foo/bar/baz" data-prefetch&gt;link text&lt;/a&gt;
 </code></pre>
 
 
-			 <p>Technically here's how it works: after pagecreate, jQuery Mobile will automatically find all links in a page that have an attribute of <code>data-prefetch</code> and automatically load the pages so they're available as soon as the user clicks on the link. The Ajax loader won't appear unless the framework hasn't loaded the page by the time the link was clicked.</p> 
-			
+			 <p>Technically here's how it works: after pagecreate, jQuery Mobile will automatically find all links in a page that have an attribute of <code>data-prefetch</code> and automatically load the pages so they're available as soon as the user clicks on the link. The Ajax loader won't appear unless the framework hasn't loaded the page by the time the link was clicked.</p>
+
 			<p>Pre-fetching links will naturally cause additional HTTP requests and increased bandwidth that may never be used, so it's important to use this feature only in situations where it's highly likely that a page will be visited.</p>
-		
-	
+
+
 <pre><code> &lt;a href="foo/bar/baz" data-prefetch&gt;link text&lt;/a&gt;</code></pre>
 
 		<p>Pages can also be pre-fetched programmatically by calling <code>$.mobile.loadpage( url )</code></p>
@@ -58,15 +58,15 @@
 <pre><code>&lt;a href="foo/bar/baz" data-dom-cache="true"&gt;link text&lt;/a&gt;
 </code></pre>
 
-		
-		
+
+
 		<p>Alternatively, pages can be cached in the DOM programmatically like this:</p>
 <pre><code>elem.page({ domCache: true });</code></pre>
 
 
 
 
-				</div><!--/content-primary -->		
+				</div><!--/content-primary -->
 
 				<div class="content-secondary">
 
@@ -91,7 +91,7 @@
 
 							</ul>
 					</div>
-				</div>		
+				</div>
 
 			</div><!-- /content -->
 

@@ -4,7 +4,7 @@
 <div data-role="page">
         <div data-role="header">
 				<h1>.slice()</h1>
-  				
+
 </div>
 <div data-role="content" data-theme="c" id="slice1">
 <h2 class="jq-clearfix roundTop section-title">
@@ -55,7 +55,7 @@
   span { color:red; font-weight:bold; }
   button { margin:5px; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;&lt;button&gt;Turn slice yellow&lt;/button&gt;
@@ -82,11 +82,11 @@
                            start + 1;
       if (end == $div.length) end = undefined;
       $div.css("background", "");
-      if (end) 
-        $div.slice(start, end).css("background", "yellow");   
+      if (end)
+        $div.slice(start, end).css("background", "yellow");
        else
         $div.slice(start).css("background", "yellow");
-      
+
       $("span").text('$("div").slice(' + start +
                      (end ? ', ' + end : '') +
                      ').css("background", "yellow");');

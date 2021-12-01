@@ -4,12 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>jQuery Mobile Docs - Forms</title>
-	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" />
+	<link rel="stylesheet"  href="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" />
 	<link rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="../../experiments/themeswitcher/jquery.mobile.themeswitcher.js"></script>
 	<script src="../_assets/js/jqm-docs.js"></script>
-	<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
 </head>
 <body>
 
@@ -69,12 +69,12 @@
 
 	<h2>Disabling form elements</h2>
 	<p>All jQuery Mobile widgets can be disabled in the markup by adding the standard <code>disabled</code> attribute to the element, just like you would with native controls. Each form widget also has standard <code>disable</code> and <code>enable</code> methods that are documented with each form widget. Here are a few examples of disabled widgets. Note that you can disable form buttons, but not links with a role of button because links don't have a parallel disabled feature in HTML. If you need to disable a link-based button, it's possible to apply the same disabled class <code>ui-disabled</code> with JavaScript to the enhanced button markup generated to achieve this effect. </p>
-	
+
 	<div data-role="fieldcontain">
      <label for="foo">Text Input:</label>
      <input type="text" name="name" id="foo" value="" disabled />
 	</div>
-	
+
 	<div data-role="fieldcontain">
 	<fieldset data-role="controlgroup">
     	<legend>Gender:</legend>
@@ -92,7 +92,7 @@
 		<option value="off">Off</option>
 		<option value="on">On</option>
 	</select>
-    </div>    
+    </div>
 
 	<div data-role="fieldcontain">
 		<label for="select-choice-x" class="select">Shipping:</label>
@@ -103,10 +103,10 @@
 			<option value="express">Express</option>
 			<option value="overnight">Overnight</option>
 		</select>
-	</div> 
-	
+	</div>
+
 	<p>Note that you can disable buttons created from <code>button</code> or <code>input</code>-based markup, but not links with a role of button. Links don't have a parallel disabled feature in HTML, but if you need to disable a link-based button (or any element), it's possible to apply the disabled class <code>ui-disabled</code> yourself with JavaScript to achieve the same effect. </p>
-	
+
 		<h2>Field containers</h2>
 		<p>To improve the styling to labels and form elements on wider screens, we recommend wrapping a <code>div</code> or <code>fieldset </code>with the <code> data-role="fieldcontain"</code> attribute around each label/form element. This framework aligns the input and associated label side-by-side, and breaks to stacked block-level elements below ~480px. The framework will also add a thin bottom border to act as a field separator.</p>
 
@@ -126,13 +126,13 @@
 		</div>
 
 		<p>For additional examples, see the <a href="forms-all.html">form elements gallery</a></p>
-		
-		
+
+
 	<h2>Auto-initialization of form elements</h2>
 	<p>By default, jQuery Mobile will automatically enhance certain native form controls into rich touch-friendly components. This is handled internally by finding form elements by tag name and running a plugin method on them, so for instance, a <code>select</code> element will be found and initialized with the "selectmenu" plugin, while an <code>input</code> element with a <code>type="checkbox"</code> will be enhanced with the "checkboxradio" plugin. Once initialized, you can address these enhanced components programmatically through their jQuery UI widget API methods - see options, methods and events listed on each form plugin's documentation page for details. </p>
 
-	<h2>Initializing groups of dynamically-injected form elements</h2> 
-	<p>If you should generate new markup client-side or load in content via AJAX and inject it into a page, you can trigger the <code>create</code> event to handle the auto-initialization for all the plugins contained within the new markup. This can be triggered on any element (even the page div itself), saving you the task of manually initializing each plugin (see below).</p> 
+	<h2>Initializing groups of dynamically-injected form elements</h2>
+	<p>If you should generate new markup client-side or load in content via AJAX and inject it into a page, you can trigger the <code>create</code> event to handle the auto-initialization for all the plugins contained within the new markup. This can be triggered on any element (even the page div itself), saving you the task of manually initializing each plugin (see below).</p>
 
 	<p>For example, if a block of HTML markup (say a login form) was loaded in through Ajax, trigger the create event to automatically transform all the widgets it contains (inputs and buttons in this case) into the enhanced versions. The code for this scenario would be:</p>
 
@@ -195,18 +195,18 @@ $(document).bind('mobileinit',function(){
 
 <p>One special case is that of selects. The above sample will prevent any and all augmentation from taking place on select elements in the page if <code>select</code> is included. If you wish to retain the native performance, look/feel of the menu itself and benefit from the visual augmentation of the select button by jQuery Mobile you can set $.mobile.nativeSelectMenu to true in a <code>mobileinit</code> callback as a global setting or use <code>data-native="true"</code> on a case by case basis.</p>
 
-		
 
-	</div><!--/content-primary -->		
-	
+
+	</div><!--/content-primary -->
+
 	<div class="content-secondary">
-		
+
 		<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="d">
-			
+
 				<h3>More in this section</h3>
-				
+
 				<ul data-role="listview" data-theme="c" data-dividertheme="d">
-				
+
 					<li data-role="list-divider">Form elements</li>
 					<li data-theme="a"><a href="docs-forms.html">Form basics</a></li>
 					<li><a href="forms-all.html">Form element gallery</a></li>
@@ -220,18 +220,18 @@ $(document).bind('mobileinit',function(){
 					<li><a href="forms-themes.html">Theming forms</a></li>
 					<li><a href="forms-all-native.html">Native form elements</a></li>
 					<li><a href="forms-sample.html">Submitting forms</a></li>
-					
-	
+
+
 				</ul>
 		</div>
-	</div>		
+	</div>
 
 </div><!-- /content -->
 
 <div data-role="footer" class="footer-docs" data-theme="c">
 		<p>&copy; 2011 The jQuery Project</p>
 </div>
-	
+
 </div><!-- /page -->
 
 </body>

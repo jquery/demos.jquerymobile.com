@@ -1,16 +1,16 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 	<head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"> 
-	<title>jQuery Mobile Docs - Checkboxes</title> 
-	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.css" />  
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<title>jQuery Mobile Docs - Checkboxes</title>
+	<link rel="stylesheet"  href="https://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.css" />
 	<link rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.5.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.js"></script>
 	<script type="text/javascript" src="../docs/docs.js"></script>
-</head> 
-<body> 
+</head>
+<body>
 
 <div data-role="page">
 
@@ -20,22 +20,22 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-		
+
 		<form action="#" method="get">
 
 		<h2>Checkboxes</h2>
 		<p>Checkboxes are used to provide a list of options where more than one can be selected. Traditional desktop checkboxes are not optimized for touch input so in jQuery Mobile, we style the <code>label</code> for the checkboxes so they are larger and look clickable. A custom set of icons are added to the label to provide additional visual feedback.</p>
-		
+
 		<p>Both the radio and checkbox controls below use standard input/label markup, but are styled to be more touch-friendly. The styled control you see is actually the label element, which sits over the real input, so if images fail to load, you'll still have a functional control. In most browsers, clicking the label automatically triggers a click on the input, but we've had to trigger the update manually for a few mobile browsers that don't do this natively. On the desktop, these controls are keyboard and screen-reader accessible. </p>
 
 		<p>To create a single checkbox, add an <code>input</code> with a <code>type="checkbox"</code> attribute and a corresponding <code>label</code>. Set the <code>for</code> attribute of the <code>label</code> to match the ID of the <code>input</code> so they are semantically associated.</p>
-		
+
 		<p>Because checkboxes use the <code>label</code> element for the text displayed next to the checkbox form element, we recommend wrapping the checkbox in a <code>fieldset</code> element that has a <code>legend</code> which acts as the title for the question. Add the  <code> data-role="controlgroup"</code> attribute to the <code>fieldset</code> so it can be styled in a parallel way as text inputs, selects or other form elements.</p>
-		
+
 		<p>Lastly, need to wrap the <code>fieldset</code> in a <code>div</code> with <code> data-role="controlgroup"</code> attribute to the <code>fieldset</code> so it can be styled in a parallel way as text inputs, selects or other form elements.</p>
 
 
-<pre><code>	
+<pre><code>
 &lt;div data-role=&quot;fieldcontain&quot;&gt;
  	&lt;fieldset data-role=&quot;controlgroup&quot;&gt;
 		&lt;legend&gt;Agree to the terms:&lt;/legend&gt;
@@ -52,9 +52,9 @@
 			<label for="checkbox-1">I agree</label>
 	    </fieldset>
 	</div>
-		
+
 		<h2>Vertically grouped checkboxes</h2>
-		
+
 		<p>Typically, there are multiple checkboxes listed under a question title. To visually integrate multiple checkboxes into a grouped button set, the framework will automatically remove all margins between buttons and round only the top and bottom corners of the set if there is a <code> data-role="controlgroup"</code> attribute on the fie.</p>
 
 			<div  data-role="fieldcontain">
@@ -65,7 +65,7 @@
 
 					<input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
 					<label for="checkbox-2a">Doritos</label>
-					
+
 					<input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" />
 					<label for="checkbox-3a">Fritos</label>
 
@@ -73,9 +73,9 @@
 					<label for="checkbox-4a">Sun Chips</label>
 			    </fieldset>
 			</div>
-		
+
 		<h2>Horizontal toggle sets</h2>
-		
+
 		<p>Checkboxes can also be used for grouped button sets where more than one button can be selected at once, such as the bold, italic and underline button group seen in word processors. To make a horizontal button set, add the <code> data-type="horizontal"</code> to the <code>fieldset</code>.</p>
 
 <code>
@@ -83,7 +83,7 @@
 </code>
 
 			<p>The framework will float the labels so they sit side-by-side on a line, hide the checkbox icons and only round the left and right edges of the group.</p>
-			
+
 		<div data-role="fieldcontain">
 		    <fieldset data-role="controlgroup" data-type="horizontal">
 		    	<legend>Font styling:</legend>
@@ -94,12 +94,12 @@
 				<label for="checkbox-7"><em>i</em></label>
 
 				<input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom" />
-				<label for="checkbox-8">u</label>    
+				<label for="checkbox-8">u</label>
 		    </fieldset>
 		</div>
 
 <h2>Refreshing a checkbox</h2>
-        
+
 <p>If you manipulate a radiobutton via JavaScript, you must call the refresh   method on it to update the visual styling. Here is an example:</p>
 <code>
 $("input[type='checkbox']").attr("checked",true).checkboxradio("refresh");
@@ -108,7 +108,7 @@ $("input[type='checkbox']").attr("checked",true).checkboxradio("refresh");
 
 
 	</form>
-	
+
 	</div><!-- /content -->
 </div><!-- /page -->
 

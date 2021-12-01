@@ -1,17 +1,17 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 	<head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>jQuery Mobile Docs - Prefetching &amp; caching pages</title> 
-	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css" />  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile Docs - Prefetching &amp; caching pages</title>
+	<link rel="stylesheet"  href="https://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css" />
 	<link rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="../../experiments/themeswitcher/jquery.mobile.themeswitcher.js"></script>
 	<script src="../_assets/js/jqm-docs.js"></script>
-	<script src="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script>
-</head> 
-<body> 
+	<script src="https://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script>
+</head>
+<body>
 
 	<div data-role="page" class="type-interior">
 
@@ -21,15 +21,15 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<div class="content-primary">		
-			
-			
+		<div class="content-primary">
+
+
 			<h2>Prefetching pages</h2>
-	
+
       <p>Usually, it's a good idea to store your app's pages in several single-page templates instead of one large multi-page template. This minimizes the size of the page's DOM.</p>
 
 			<p>When using single-page templates, you can prefetch pages into the DOM so that they're available instantly when the user visits them. To prefetch a page, add the <code>data-prefetch</code> attribute to a link that points to the page. jQuery Mobile then loads the target page in the background after the primary page has loaded and the pagecreate event has triggered. For example:</p>
-			
+
 <pre><code>
 &lt;a href="prefetchThisPage.html" data-prefetch&gt; ... &lt;/a&gt;
 </code></pre>
@@ -41,8 +41,8 @@
 <pre><code>
 $.mobile.loadPage( <var>pageUrl</var>, { showLoadMsg: false } );
 </code></pre>
-			
-			<p>Another advantage of prefetching a page is that the user doesn't see the Ajax loading message when visiting the prefetched page. The Ajax loading message only appears if the framework hasn't finished prefetching the page by the time the link is followed.</p> 
+
+			<p>Another advantage of prefetching a page is that the user doesn't see the Ajax loading message when visiting the prefetched page. The Ajax loading message only appears if the framework hasn't finished prefetching the page by the time the link is followed.</p>
 
 			<p>Prefetching pages naturally creates additional HTTP requests and uses bandwidth, so it's wise to use this feature only in situations where it's highly likely that the prefetched page will be visited. A common scenario is a photo gallery, where you can prefetch the "previous" and "next" photo pages so that the user can move quickly between photos.</p>
 
@@ -52,7 +52,7 @@ $.mobile.loadPage( <var>pageUrl</var>, { showLoadMsg: false } );
 		<p>For animated page transitions to work, the pages you're transitioning from and to both need to be in the DOM. However, keeping old pages in the DOM quickly fills the browser's memory, and can cause some mobile browsers to slow down or even crash.</p>
 
 		<p>jQuery Mobile therefore has a simple mechanism to keep the DOM tidy. Whenever it loads a page via Ajax, jQuery Mobile flags the page to be removed from the DOM when you navigate away from it later (technically, on the pagehide event). If you revisit a removed page, the browser may be able to retrieve the page's HTML file from its cache. If not, it refetches the file from the server. (In the case of nested list views, jQuery Mobile removes all the pages that make up the nested list once you navigate to a page that's not part of the list.)</p>
-    
+
     <p>Pages inside a multi-page template aren't affected by this feature at all - jQuery Mobile only removes pages loaded via Ajax.</p>
 
 
@@ -81,7 +81,7 @@ $.mobile.page.prototype.options.domCache = true;
     <p>The drawback of DOM caching is that the DOM can get very large, resulting in slowdowns and memory issues on some devices. If you enable DOM caching, take care to manage the DOM yourself and test thoroughly on a range of devices.</p>
 
 
-				</div><!--/content-primary -->		
+				</div><!--/content-primary -->
 
 				<div class="content-secondary">
 
@@ -107,7 +107,7 @@ $.mobile.page.prototype.options.domCache = true;
 
 							</ul>
 					</div>
-				</div>		
+				</div>
 
 			</div><!-- /content -->
 

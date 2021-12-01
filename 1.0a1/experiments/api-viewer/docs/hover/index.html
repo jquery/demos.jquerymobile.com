@@ -3,7 +3,7 @@
 <div data-role="page">
         <div data-role="header">
 				<h1>.hover()</h1>
-  				
+
 </div>
 
 
@@ -38,7 +38,7 @@
   li { cursor:default; }
   span { color:red; }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;ul&gt;
@@ -52,7 +52,7 @@
 $("li").hover(
   function () {
     $(this).append($("&lt;span&gt; ***&lt;/span&gt;"));
-  }, 
+  },
   function () {
     $(this).find("span:last").remove();
   }
@@ -118,7 +118,7 @@ $("li.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
   li.active { background:black;color:white; }
   span { color:red; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;ul&gt;

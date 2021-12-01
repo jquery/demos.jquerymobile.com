@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>changePage JSON Sample</title>
-<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css">
-<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+<link rel="stylesheet"  href="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css">
+<script src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
 <script type="text/javascript">
 
 // Load the JSON data for a specific category, based on
@@ -19,53 +19,53 @@ function showCategory( url, options )
 		if ( category ) {
 			// Get the page we are going to dump our content into.
 			var $page = $( "#category-items" ),
-	
+
 				// Get the header for the page.
 				$header = $page.children( ":jqmData(role=header)" ),
-	
+
 				// Get the content area element for the page.
 				$content = $page.children( ":jqmData(role=content)" ),
-	
+
 				// The markup we are going to inject into the content
 				// area of the page.
 				markup = "<p>" + category.description + "</p><ul data-role='listview' data-inset='true'>",
-	
+
 				// The array of items for this category.
 				cItems = category.items,
-	
+
 				// The number of items in the category.
 				numItems = cItems.length;
-	
+
 			// Generate a list item for each item in the category
 			// and add it to our markup.
 			for ( var i = 0; i < numItems; i++ ) {
 				markup += "<li>" + cItems[i].name + "</li>";
 			}
 			markup += "</ul>";
-	
+
 			// Find the h1 element in our header and inject the name of
 			// the category into it.
 			$header.find( "h1" ).html( category.name );
-	
+
 			// Inject the category items markup into the content element.
 			$content.html( markup );
-	
+
 			// Pages are lazily enhanced. We call page() on the page
 			// element to make sure it is always enhanced before we
 			// attempt to enhance the listview markup we just injected.
 			// Subsequent calls to page() are ignored since a page/widget
 			// can only be enhanced once.
 			$page.page();
-	
+
 			// Enhance the listview we just injected.
 			$content.find( ":jqmData(role=listview)" ).listview();
-	
+
 			// We don't want the data-url of the page we just modified
 			// to be the url that shows up in the browser's location field,
 			// so set the dataUrl option to the URL for the category
 			// we just loaded.
 			options.dataUrl = url;
-	
+
 			// Now call changePage() and tell it to switch to
 			// the page we just modified.
 			$.mobile.changePage( $page, options );
@@ -73,7 +73,7 @@ function showCategory( url, options )
 	});
 }
 
- 
+
 // Listen for any attempts to call changePage().
 $(document).bind( "pagebeforechange", function( e, data ) {
 	// We only want to handle changePage() calls where the caller is

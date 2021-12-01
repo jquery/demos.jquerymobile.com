@@ -1,12 +1,12 @@
-<!DOCTYPE html> 
-<html> 
-	<head> 
-	<title>jQuery Mobile Docs - Lists</title> 
-	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" /> 
-	<script src="http://code.jquery.com/jquery-1.4.3.min.js"></script><script type="text/javascript" src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>jQuery Mobile Docs - Lists</title>
+	<link rel="stylesheet"  href="https://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+	<script src="https://code.jquery.com/jquery-1.4.3.min.js"></script><script type="text/javascript" src="https://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
 	<script type="text/javascript" src="../docs/docs.js"></script>
-</head> 
-<body> 
+</head>
+<body>
 
 <div data-role="page">
 
@@ -15,10 +15,10 @@
 	</div><!-- /header -->
 
 	<div data-role="content" class="ui-body">
-		
+
 
 		<p>All the standard button swatches can be applied to lists. The framework assigns a default list theme swatch of "c" (silver in the default theme) and swatch "b" (blue in default theme) for dividers. Below is a default themed list.</p>
-		
+
 <code>
 &lt;ul data-role=&quot;listview&quot; data-inset=&quot;true&quot;&gt;
 </code>
@@ -31,52 +31,52 @@
 
 				<h2>Theming list items</h2>
 		<p>The list item color scheme can be changed to any button color theme swatch by adding the <code>data-theme</code> attribute to the list, and setting the letter theme swatch. Here is the same list above with the "a" swatch applied. </p>
-		
+
 <code>
 &lt;ul data-role=&quot;listview&quot; data-inset=&quot;true&quot; data-theme=&quot;d&quot;&gt;
 </code>
-		
+
 		<ul data-role="listview" data-inset="true" data-theme="d">
 			<li data-role="list-divider">Divider</li>
 			<li><a href="index.html">Inbox</a> <span class="ui-li-count">12</span></li>
 			<li><a href="index.html">Outbox</a> <span class="ui-li-count">0</span></li>
 			<li><a href="index.html">Sent</a> <span class="ui-li-count">328</span></li>
 		</ul>
-		
+
 		<h2>Theming dividers</h2>
-		
+
 		<p>The theme for <strong>list dividers</strong> can be set by adding the <code>data-dividertheme</code> to the list and specifying a swatch letter. Here is an example of the same list above with swatch "d" set on the dividers.</p>
-		
+
 <code>
 &lt;ul data-role=&quot;listview&quot; data-inset=&quot;true&quot; data-theme=&quot;d&quot; data-dividertheme=&quot;c&quot;&gt;
 </code>
-		
+
 		<ul data-role="listview" data-inset="true" data-theme="d" data-dividertheme="c">
 			<li data-role="list-divider">Divider</li>
 			<li><a href="index.html">Inbox</a> <span class="ui-li-count">12</span></li>
 			<li><a href="index.html">Outbox</a> <span class="ui-li-count">0</span></li>
 			<li><a href="index.html">Sent</a> <span class="ui-li-count">328</span></li>
 		</ul>
-		
+
 		<h2>Theming count bubbles</h2>
-		
+
 		<p>The theme for <strong>count bubbles</strong> can be set by adding the <code>data-counttheme</code> to the list and specifying a swatch letter. Here is an example with swatch "e" set on the dividers.</p>
-		
+
 <code>
 &lt;ul data-role=&quot;listview&quot; data-inset=&quot;true&quot; data-theme=&quot;a&quot; data-dividertheme=&quot;d&quot; data-counttheme=&quot;e&quot;&gt;
 </code>
-		
+
 		<ul data-role="listview" data-inset="true" data-theme="a" data-dividertheme="d" data-counttheme="e">
 			<li data-role="list-divider">Divider</li>
 			<li><a href="index.html">Inbox</a> <span class="ui-li-count">12</span></li>
 			<li><a href="index.html">Outbox</a> <span class="ui-li-count">0</span></li>
 			<li><a href="index.html">Sent</a> <span class="ui-li-count">328</span></li>
 		</ul>
-		
+
 		<h2>Theming split buttons</h2>
-		
+
 		<p>For split lists which a second button, the framework default to "b" for the theme swatch (blue in the default theme)  Here is a default split list:</p>
-		
+
 		<ul data-role="listview" data-inset="true">
 			<li>
 				<img src="images/album-bb.jpg" />
@@ -91,7 +91,7 @@
 				<a href="index.html">Purchase album</a>
 			</li>
 		</ul>
-		
+
 <code>
 &lt;ul data-role=&quot;listview&quot; data-inset=&quot;true&quot; data-splittheme=&quot;a&quot;&gt;
 </code>
@@ -112,7 +112,7 @@
 		</ul>
 
 		<p>The icon for the split theme can set at the list level by adding the <code>data-spliticon</code> to the list and specifying a <a href="../buttons/buttons-icons.html">standard icon</a>. This attribute can also be added to individual split inside list items by adding a <code>data-icon</code> attribute to specific links (see second list item).</p>
-		
+
 <code>
 &lt;ul data-role=&quot;listview&quot; data-inset=&quot;true&quot; data-splittheme=&quot;a&quot; data-spliticon=&quot;plus&quot;&gt;
 </code>
@@ -131,48 +131,48 @@
 				<a href="index.html" data-theme="e" data-icon="delete">Purchase album</a>
 			</li>
 		</ul>
-		
 
-		
+
+
 		<h2>Examples of all basic list swatches</h2>
-		
+
 		<p><strong>A</strong> swatch</p>
 		<ul data-role="listview" data-inset="true" data-theme="a">
 			<li><a href="index.html">Inbox</a> <span class="ui-li-count">12</span></li>
 			<li><a href="index.html">Outbox</a> <span class="ui-li-count">0</span></li>
 			<li><a href="index.html">Trash</a> <span class="ui-li-count">62</span></li>
 		</ul>
-		
+
 		<p><strong>B</strong> swatch</p>
 		<ul data-role="listview" data-inset="true" data-theme="b">
 			<li><a href="index.html">Inbox</a> <span class="ui-li-count">12</span></li>
 			<li><a href="index.html">Outbox</a> <span class="ui-li-count">0</span></li>
 			<li><a href="index.html">Trash</a> <span class="ui-li-count">62</span></li>
 		</ul>
-		
+
 		<p><strong>C</strong> swatch</p>
 		<ul data-role="listview" data-inset="true" data-theme="c">
 			<li><a href="index.html">Inbox</a> <span class="ui-li-count">12</span></li>
 			<li><a href="index.html">Outbox</a> <span class="ui-li-count">0</span></li>
 			<li><a href="index.html">Trash</a> <span class="ui-li-count">62</span></li>
 		</ul>
-		
+
 		<p><strong>D</strong> swatch</p>
 		<ul data-role="listview" data-inset="true" data-theme="d">
 			<li><a href="index.html">Inbox</a> <span class="ui-li-count">12</span></li>
 			<li><a href="index.html">Outbox</a> <span class="ui-li-count">0</span></li>
 			<li><a href="index.html">Trash</a> <span class="ui-li-count">62</span></li>
 		</ul>
-		
+
 		<p><strong>E</strong> swatch</p>
 		<ul data-role="listview" data-inset="true" data-theme="e">
 			<li><a href="index.html">Inbox</a> <span class="ui-li-count">12</span></li>
 			<li><a href="index.html">Outbox</a> <span class="ui-li-count">0</span></li>
 			<li><a href="index.html">Trash</a> <span class="ui-li-count">62</span></li>
 		</ul>
-		
-		
-			
+
+
+
 	</div><!-- /content -->
 </div><!-- /page -->
 

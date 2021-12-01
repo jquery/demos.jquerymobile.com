@@ -3,7 +3,7 @@
 <div class="ui-page">
         <div data-role="header">
 				<h1>.animate()</h1>
-  				
+
 </div>
 <div data-role="content" data-theme="c" id="animate1">
 <h2 class="jq-clearfix roundTop section-title">
@@ -55,7 +55,7 @@
 <pre>&lt;div id="clickme"&gt;
   Click here
 &lt;/div&gt;
-&lt;img id="book" src="book.png" alt="" width="100" height="123" 
+&lt;img id="book" src="book.png" alt="" width="100" height="123"
   style="position: relative; left: 10px;" /&gt;</pre>
 <p>We can animate the opacity, left offset, and height of the image simultaneously:</p>
 <pre>$('#clickme').click(function() {
@@ -72,7 +72,7 @@
   <img src="http://api.jquery.com/images/animate-1.jpg" alt=""></p>
 <p>Note that we have specified <code>toggle</code> as the target value of the <code>height</code> property. Since the image was visible before, the animation shrinks the height to 0 to hide it. A second click then reverses this transition:
 </p>
-<p class="image"> 
+<p class="image">
 <img src="http://api.jquery.com/images/animate-2.jpg" alt=""></p>
 <p>The <code>opacity</code> of the image is already at its target value, so this property is not animated by the second click. Since we specified the target value for <code>left</code> as a relative value, the image moves even farther to the right during this second animation.</p>
 <p>The <code>position</code> attribute of the element must not be <code>static</code> if we wish to animate the <code>left</code> property as we do in the example.</p>
@@ -97,11 +97,11 @@
     width: 'toggle',
     height: 'toggle'
   }, {
-    duration: 5000, 
+    duration: 5000,
     specialEasing: {
       width: 'linear',
       height: 'easeOutBounce'
-    }, 
+    },
     complete: function() {
       $(this).after('&lt;div&gt;Animation complete.&lt;/div&gt;');
     }
@@ -118,13 +118,13 @@
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;
-div { 
-background-color:#bca; 
-width:100px; 
+div {
+background-color:#bca;
+width:100px;
 border:1px solid green;
 }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;button id="go"&gt;&amp;raquo; Run&lt;/button&gt;
@@ -134,11 +134,11 @@ border:1px solid green;
 
 // Using multiple unit types within one animation.
 $("#go").click(function(){
-  $("#block").animate({ 
+  $("#block").animate({
     width: "70%",
     opacity: 0.4,
     marginLeft: "0.6in",
-    fontSize: "3em", 
+    fontSize: "3em",
     borderWidth: "10px"
   }, 1500 );
 });
@@ -155,16 +155,16 @@ $("#go").click(function(){
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;
-div { 
-position:absolute; 
-background-color:#abc; 
+div {
+position:absolute;
+background-color:#abc;
 left:50px;
-width:90px; 
+width:90px;
 height:90px;
-margin:5px; 
+margin:5px;
 }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;button id="left"&gt;&amp;laquo;&lt;/button&gt; &lt;button id="right"&gt;&amp;raquo;&lt;/button&gt;
@@ -217,8 +217,8 @@ The second button starts a traditional chained animation, where each animation w
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;style&gt;div { 
-  background-color:#bca; 
+  &lt;style&gt;div {
+  background-color:#bca;
   width:200px;
   height:1.1em;
   text-align:center;
@@ -230,7 +230,7 @@ button {
   font-size:14px;
 }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;button id="go1"&gt;&amp;raquo; Animate Block1&lt;/button&gt;

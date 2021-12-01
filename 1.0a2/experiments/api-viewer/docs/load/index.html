@@ -4,7 +4,7 @@
 <div data-role="page">
         <div data-role="header">
 				<h1>.load()</h1>
-  				
+
 </div>
 <div data-role="content" data-theme="c" id="load1">
 <h2 class="jq-clearfix roundTop section-title">
@@ -46,10 +46,10 @@
   &lt;style&gt;
  body{ font-size: 12px; font-family: Arial; }
  &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	
+
 &lt;b&gt;Footer navigation:&lt;/b&gt;
 &lt;ol id="new-nav"&gt;&lt;/ol&gt;
 
@@ -70,15 +70,15 @@
   &lt;style&gt;
   body{ font-size: 12px; font-family: Arial; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	
+
 &lt;b&gt;Successful Response (should be blank):&lt;/b&gt;
 &lt;div id="success"&gt;&lt;/div&gt;
 &lt;b&gt;Error Response:&lt;/b&gt;
 &lt;div id="error"&gt;&lt;/div&gt;
-  
+
 &lt;script&gt;
 $("#success").load("/not-here.php", function(response, status, xhr) {
   if (status == "error") {

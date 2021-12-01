@@ -1,12 +1,12 @@
-<!DOCTYPE html> 
-<html> 
-	<head> 
-	<title>jQuery Mobile Docs - Forms</title> 
-	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" /> 
-	<script src="http://code.jquery.com/jquery-1.4.3.min.js"></script><script type="text/javascript" src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>jQuery Mobile Docs - Forms</title>
+	<link rel="stylesheet"  href="https://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+	<script src="https://code.jquery.com/jquery-1.4.3.min.js"></script><script type="text/javascript" src="https://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
 	<script type="text/javascript" src="../docs/docs.js"></script>
-</head> 
-<body> 
+</head>
+<body>
 
 <div data-role="page">
 
@@ -15,19 +15,19 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-		
+
 		<form action="#" method="get">
 
 			<h2>Select menus</h2>
-		
+
 			<p>The select menus are driven off native <code>select</code> elements, but the native selects are hidden from view and replaced with more style-friendly markup. The replacement buttons and menus are ARIA-enabled and are keyboard accessible on the desktop as well. </p>
 			<p>When clicked, if the menu has room it will appear as an overlay listbox, but if there are too many options to fit in the window without scrolling, the page content is wrapped in a div and hidden, and the menu is appended as a whole new page. This lets us take advantage of native scrolling while the menu is in use. </p>
-			
+
 			<p>To add a select widget to your page, start with a standard <code>select</code> element populated with a set of <code>option</code> elements. Set the <code>for</code> attribute of the <code>label</code> to match the ID of the <code>select</code> so they are semantically associated. Wrap them in a <code>div</code> with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form. </p>
-			
+
 			<p>The framework will find all <code>select</code> elements and automatically enhance them into the custom select menus.</p>
 
-<pre><code>	
+<pre><code>
 &lt;div data-role=&quot;fieldcontain&quot;&gt;
 	&lt;label for=&quot;select-choice-1&quot; class=&quot;select&quot;&gt;Choose shipping method:&lt;/label&gt;
 	&lt;select name=&quot;select-choice-1&quot; id=&quot;select-choice-1&quot;&gt;
@@ -38,7 +38,7 @@
 	&lt;/select&gt;
 &lt;/div&gt;
 </code></pre>
-			
+
 			<p> If there is a small number of options that will fit on the device's screen, it will appear as a small overlay with a pop transition.</p>
 
 					<div data-role="fieldcontain">
@@ -111,11 +111,11 @@
 					</div>
 
 
-	
-			 
+
+
 
 	</form>
-	
+
 	</div><!-- /content -->
 </div><!-- /page -->
 

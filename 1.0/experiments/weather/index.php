@@ -6,8 +6,8 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'http://www.google.com/ig/api?weather='. $location);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_TIMEOUT, 10); 
-$result = curl_exec($ch); 
+curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+$result = curl_exec($ch);
 curl_close($ch);
 
 //parse xml (thx KomunitasWeb.com for pointers)
@@ -16,15 +16,15 @@ $information = $xml->xpath("/xml_api_reply/weather/forecast_information");
 $current = $xml->xpath("/xml_api_reply/weather/current_conditions");
 $forecast_list = $xml->xpath("/xml_api_reply/weather/forecast_conditions");
 ?>
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 	<head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>jQuery Mobile Framework - Weather for <?php echo $information[0]->city['data']; ?></title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile Framework - Weather for <?php echo $information[0]->city['data']; ?></title>
 	<link rel="stylesheet"  href="//code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-	<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>
 	<style>
 		.current { text-align: left; }
 		h1 { font-size: 1.3em; text-align: center;  }
@@ -40,8 +40,8 @@ $forecast_list = $xml->xpath("/xml_api_reply/weather/forecast_conditions");
 			$('.ui-listview img').removeClass('ui-corner-bl');
 		});
 	</script>
-</head> 
-<body> 
+</head>
+<body>
 
 <div data-role="page" data-theme="a">
 
@@ -60,7 +60,7 @@ $forecast_list = $xml->xpath("/xml_api_reply/weather/forecast_conditions");
             <p class="condition">
             <?php echo $current[0]->temp_f['data']; ?>&deg; F,
             <?php echo $current[0]->condition['data']; ?>
-            
+
             </p>
         </div>
 
@@ -68,21 +68,21 @@ $forecast_list = $xml->xpath("/xml_api_reply/weather/forecast_conditions");
         <ul data-role="listview" data-inset="true" data-theme="a">
         	<li data-role="list-divider">This week's forecast</li>
         <?php foreach ($forecast_list as $forecast) : ?>
-        
+
         	<li>
-            <img src="<?php echo 'http://www.google.com' . $forecast->icon['data']; ?>"> 
+            <img src="<?php echo 'http://www.google.com' . $forecast->icon['data']; ?>">
             <h3><?php echo $forecast->day_of_week['data']; ?></h3>
             <p>
 	            <?php echo $forecast->low['data']; ?>&deg; F - <?php echo $forecast->high['data']; ?>&deg; F,
 	            <?php echo $forecast->condition['data']; ?>
             </p>
             </li>
-        	
+
         <?php endforeach; ?>
-		</ul> 
+		</ul>
 	</div>
-	
-	
+
+
 </div>
 
 </body>

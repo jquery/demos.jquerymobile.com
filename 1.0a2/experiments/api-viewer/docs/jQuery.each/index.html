@@ -4,7 +4,7 @@
 <div data-role="page">
         <div data-role="header">
 				<h1>jQuery.each()</h1>
-  				
+
 </div>
 <div data-role="content" data-theme="c" id="jQuery.each1">
 <h2 class="jq-clearfix roundTop section-title">
@@ -21,8 +21,8 @@
 </li></ul>
 <div class="longdesc">
 <p>The <code>$.each()</code> function is not the same as <a href="/each/">.each()</a>, which is used to iterate, exclusively, over a jQuery object. The <code>$.each()</code> function can be used to iterate over any collection, whether it is a map (JavaScript object) or an array. In the case of an array, the callback is passed an array index and a corresponding array value each time. (The value can also be accessed through the <code>this</code> keyword.)</p>
-<pre>$.each([52, 97], function(index, value) { 
-  alert(index + ': ' + value); 
+<pre>$.each([52, 97], function(index, value) {
+  alert(index + ': ' + value);
 });
 </pre>
 <p>This produces two messages:</p>
@@ -30,12 +30,12 @@
   <span class="output">0: 52</span><br><span class="output">1: 97</span>
 </p>
 <p>If a map is used as the collection, the callback is passed a key-value pair each time:</p>
-<pre>var map = { 
-  'flammable': 'inflammable', 
-  'duh': 'no duh' 
-}; 
-$.each(map, function(key, value) { 
-  alert(key + ': ' + value); 
+<pre>var map = {
+  'flammable': 'inflammable',
+  'duh': 'no duh'
+};
+$.each(map, function(key, value) {
+  alert(key + ': ' + value);
 });</pre>
 <p>Once again, this produces two messages:</p>
 <p>
@@ -55,10 +55,10 @@ $.each(map, function(key, value) {
   div { color:blue; }
   div#five { color:red; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	
+
   &lt;div id="one"&gt;&lt;/div&gt;
   &lt;div id="two"&gt;&lt;/div&gt;
   &lt;div id="three"&gt;&lt;/div&gt;

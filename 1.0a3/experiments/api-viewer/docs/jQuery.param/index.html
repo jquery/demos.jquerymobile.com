@@ -4,7 +4,7 @@
 <div data-role="page">
         <div data-role="header">
 				<h1>jQuery.param()</h1>
-  				
+
 </div>
 <div data-role="content" data-theme="c" id="jQuery.param1">
 <h2 class="jq-clearfix roundTop section-title">
@@ -34,10 +34,10 @@
 <p>We can display a query string representation of an object and a URI-decoded version of the same as follows:</p>
 <pre>var myObject = {
   a: {
-    one: 1, 
-    two: 2, 
+    one: 1,
+    two: 2,
     three: 3
-  }, 
+  },
   b: [1,2,3]
 };
 var recursiveEncoded = $.param(myObject);
@@ -51,10 +51,10 @@ alert(recursiveDecoded);
 <p>To emulate the behavior of <code>$.param()</code> prior to jQuery 1.4, we can set the <code>traditional</code> argument to <code>true</code>:</p>
 <pre>var myObject = {
   a: {
-    one: 1, 
-    two: 2, 
+    one: 1,
+    two: 2,
     three: 3
-  }, 
+  },
   b: [1,2,3]
 };
 var shallowEncoded = $.param(myObject, true);
@@ -75,7 +75,7 @@ alert(shallowDecoded);
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;div { color:red; }&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div id="results"&gt;&lt;/div&gt;
@@ -94,14 +94,14 @@ alert(shallowDecoded);
 <h4>Example: <span class="desc">Serialize a few complex objects</span>
 </h4>
 <pre><code class="example">
-// &lt;=1.3.2: 
+// &lt;=1.3.2:
 $.param({ a: [2,3,4] }) // "a=2&amp;a=3&amp;a=4"
 // &gt;=1.4:
 $.param({ a: [2,3,4] }) // "a[]=2&amp;a[]=3&amp;a[]=4"
 
-// &lt;=1.3.2: 
+// &lt;=1.3.2:
 $.param({ a: { b:1,c:2 }, d: [3,4,{ e:5 }] }) // "a=[object+Object]&amp;d=3&amp;d=4&amp;d=[object+Object]"
-// &gt;=1.4: 
+// &gt;=1.4:
 $.param({ a: { b:1,c:2 }, d: [3,4,{ e:5 }] }) // "a[b]=1&amp;a[c]=2&amp;d[]=3&amp;d[]=4&amp;d[2][e]=5"
 
 </code></pre>

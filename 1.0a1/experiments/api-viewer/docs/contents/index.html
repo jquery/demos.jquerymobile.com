@@ -3,7 +3,7 @@
 <div data-role="page">
         <div data-role="header">
 				<h1>.contents()</h1>
-  				
+
 </div>
 <div data-role="content" data-theme="c" id="contents1">
 <h2 class="jq-clearfix roundTop section-title">
@@ -18,13 +18,13 @@
 <p>The <code>.contents()</code> method can also be used to get the content document of an iframe, if the iframe is on the same domain as the main page.</p>
 <p>Consider a simple <code>&lt;div&gt;</code> with a number of text nodes, each of which is separated by two line break elements (<code>&lt;br /&gt;</code>):</p>
 <pre>&lt;div class="container"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
-  do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   &lt;br /&gt;&lt;br /&gt;
-  Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco
   laboris nisi ut aliquip ex ea commodo consequat.
   &lt;br /&gt; &lt;br /&gt;
-  Duis aute irure dolor in reprehenderit in voluptate velit 
+  Duis aute irure dolor in reprehenderit in voluptate velit
   esse cillum dolore eu fugiat nulla pariatur.
 &lt;/div&gt;
 </pre>
@@ -48,7 +48,7 @@ $('.container').contents().filter(function() {
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello &lt;a href="http://ejohn.org/"&gt;John&lt;/a&gt;, how are you doing?&lt;/p&gt;
@@ -64,10 +64,10 @@ $('.container').contents().filter(function() {
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	&lt;iframe src="http://api.jquery.com/" width="80%" height="600" id='frameDemo'&gt;&lt;/iframe&gt; 
+	&lt;iframe src="http://api.jquery.com/" width="80%" height="600" id='frameDemo'&gt;&lt;/iframe&gt;
 &lt;script&gt;$("#frameDemo").contents().find("a").css("background-color","#BADA55");&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>

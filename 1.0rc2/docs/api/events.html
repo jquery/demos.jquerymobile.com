@@ -4,12 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>jQuery Mobile Docs - Events</title>
-	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" />
+	<link rel="stylesheet"  href="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" />
 	<link rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="../../experiments/themeswitcher/jquery.mobile.themeswitcher.js"></script>
 	<script src="../_assets/js/jqm-docs.js"></script>
-	<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
 </head>
 <body>
 
@@ -61,7 +61,7 @@
 			<dt><code>swiperight</code></dt>
 			<dd>Triggers when a swipe event occurred moving in the right direction.</dd>
 			</dl>
-			
+
 			<h2>Virtual mouse events</h2>
 			<p>We provide a set of "virtual" mouse events that attempt to abstract away mouse and touch events. This allows the developer to register listeners for the basic mouse events, such as mousedown, mousemove, mouseup, and click, and the plugin will take care of registering the correct listeners behind the scenes to invoke the listener at the fastest possible time for that device. In touch environments, the plugin retains the order of event firing that is seen in traditional mouse environments, so for example, vmouseup is always dispatched before vmousedown, and vmousedown before vclick, etc. The virtual mouse events also normalize how coordinate information is extracted from the event, so in touch based environments, coordinates are available from the pageX, pageY, screenX, screenY, clientX, and clientY properties, directly on the event object.</p>
 			<dl>
@@ -94,7 +94,7 @@
 				<h4 style="margin:.5em 0">Canceling an elements default click behavior</h4>
 				<p>Applications can call preventDefault() on a vclick event to cancel an element's default click behavior. On mouse based devices, calling preventDefault() on a vclick event equates to calling preventDefault() on the real click event during the bubble event phase. On touch based devices, it's a bit more complicated since the actual click event is dispatched about 300ms after the vclick event is dispatched. For touch devices, calling preventDefault() on a vclick event triggers some code in the vmouse plugin that attempts to catch the next click event that gets dispatched by the browser, during the capture event phase, and call preventDefault() and stopPropagation() on it. As mentioned in the warning above, it is sometimes difficult match up a touch event with its corresponding mouse event because the targets can differ. For this reason, the vmouse plugin also falls back to attempting to identify a corresponding click event by coordinates. There are still cases where both target and coordinate identification fail, which results in the click event being dispatched and either triggering the default action of the element, or in the case where content has been shifted or replaced, triggering a click on a different element. If this happens on  a regular basis for a given element/control, we suggest you use click for triggering your action.</p>
 			</div>
-		
+
 		<h2>Orientation change event</h2>
 		<dl>
 			<dt><code>orientationchange</code></dt>
@@ -450,7 +450,7 @@ $( '#foo' ).hide().trigger( 'updatelayout' );
 </code></pre>
             </dd>
         </dl>
-		
+
 		<h2>Animation Events</h2>
 		<p>jQuery Mobile exposes the <code>animationComplete</code> plugin, which you can utilize after adding or removing a class that applies a CSS transition.</p>
 

@@ -38,8 +38,8 @@ If you think you've found a bug, please report it by following these instruction
         * If you are running from a git version, include the date and/or hash number
     - Make sure that the bug still exists at http://jquerymobile.com/test/ as it may be fixed already
     - You can use the CDN hosted JS and CSS files to test in your own code by using:
-        * [JS](http://code.jquery.com/mobile/latest/jquery.mobile.min.js)
-        * [CSS](http://code.jquery.com/mobile/latest/jquery.mobile.min.css)
+        * [JS](https://code.jquery.com/mobile/latest/jquery.mobile.min.js)
+        * [CSS](https://code.jquery.com/mobile/latest/jquery.mobile.min.css)
     - Include a link to some code of the bug in action. You can use either of these services to host your code
         * [jsbin](http://jsbin.com)
         * [jsfiddle](http://jsfiddle.net)
