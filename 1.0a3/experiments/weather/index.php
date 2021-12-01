@@ -3,7 +3,7 @@ $location = isset($_GET['location']) ? $_GET['location'] : '02135';
 
 //get xml from google api
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'http://www.google.com/ig/api?weather='. $location);
+curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/ig/api?weather='. $location);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_TIMEOUT, 10);
@@ -55,7 +55,7 @@ $forecast_list = $xml->xpath("/xml_api_reply/weather/forecast_conditions");
 		<h1>Currently in <?=$information[0]->city['data']; ?>:</h1>
 		<div class="current ui-body ui-bar-a ui-corner-all">
 
-            <img src="<?= 'http://www.google.com' . $current[0]->icon['data']?>" alt="weather">
+            <img src="<?= 'https://www.google.com' . $current[0]->icon['data']?>" alt="weather">
             <p class="condition">
             <?= $current[0]->temp_f['data'] ?>&deg; F,
             <?= $current[0]->condition['data'] ?>
@@ -69,7 +69,7 @@ $forecast_list = $xml->xpath("/xml_api_reply/weather/forecast_conditions");
         <? foreach ($forecast_list as $forecast) : ?>
 
         	<li>
-            <img src="<?= 'http://www.google.com' . $forecast->icon['data']?>">
+            <img src="<?= 'https://www.google.com' . $forecast->icon['data']?>">
             <h3><?= $forecast->day_of_week['data']; ?></h3>
             <p>
 	            <?= $forecast->low['data'] ?>&deg; F - <?= $forecast->high['data'] ?>&deg; F,

@@ -32,7 +32,7 @@ $('.page-map').live("pagecreate", function() {
 
 	/*
 	if not supported, you might attempt to use google loader for lat,long
-	$.getScript('http://www.google.com/jsapi?key=YOURAPIKEY',function(){
+	$.getScript('https://www.google.com/jsapi?key=YOURAPIKEY',function(){
 		lat = google.loader.ClientLocation.latitude;
 		lng = google.loader.ClientLocation.longitude;
 	});			
