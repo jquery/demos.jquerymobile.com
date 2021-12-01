@@ -122,7 +122,7 @@
 	                width: "220px",
 	                padding: "5px"
 	            }
-	            ,closeBoxURL: "http://maps.google.com/mapfiles/close.gif"
+	            ,closeBoxURL: "https://maps.google.com/mapfiles/close.gif"
 			});
 
 			// Feel free to make lat/lng dynamic
@@ -135,7 +135,7 @@
 			}
 
 			$.each(data, function(i) {
-				var icon = "http://maps.google.com/mapfiles/marker.png";
+				var icon = "https://maps.google.com/mapfiles/marker.png";
 				var marker = new google.maps.Marker({ map:map, position:this.position, title:this.title, icon:icon });
 				var content = this.content;
 				if (content) {
