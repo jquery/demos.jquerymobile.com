@@ -30,7 +30,7 @@ $(function(){
           search = /([^&=]+)=?([^&]*)/g,
           decode = function (s) { return decodeURIComponent(s.replace( pl, " " )); },
           query  = window.location.search.substring(1);
-          
+
       while (match = search.exec(query)){
           urlParams[decode(match[1])] = decode(match[2]);
         }
@@ -48,45 +48,45 @@ $(function(){
 	<style type="text/css">
 		/* new API additions */
 
-dt {  
-	margin: 35px 0 15px 0; 
-	background-color:#ddd; 
+dt {
+	margin: 35px 0 15px 0;
+	background-color:#ddd;
 	font-weight:normal;
 }
-dt code { 
-	display:inline-block; 
+dt code {
+	display:inline-block;
 	font-weight:bold;
-	color:#56A00E; 
-	padding:3px 7px; 
-	margin-right:10px; 
-	background-color:#fff; 
+	color:#56A00E;
+	padding:3px 7px;
+	margin-right:10px;
+	background-color:#fff;
 }
-dd { 
-	margin-bottom:10px; 
+dd {
+	margin-bottom:10px;
 }
 dd .default { font-weight:bold; }
-dd pre { 
-	margin:0 0 0 0; 
+dd pre {
+	margin:0 0 0 0;
 }
 dd code { font-weight: normal; }
-dd pre code { 
-	margin:0; 
-	border:none; 
-	font-weight:normal; 
-	font-size:100%; 
-	background-color:transparent; 
+dd pre code {
+	margin:0;
+	border:none;
+	font-weight:normal;
+	font-size:100%;
+	background-color:transparent;
 }
 dd h4 { margin:15px 0 0 0; }
-		
+
 .localnav {
 	margin:0 0 20px 0;
 }
 .ui-mobile-viewport .localnav li {
 	float:left;
 }
-.localnav .ui-btn-inner { 
-	padding: .6em 10px; 
-	font-size:80%; 
+.localnav .ui-btn-inner {
+	padding: .6em 10px;
+	font-size:80%;
 }
 	</style>
 <body id="top">
@@ -112,15 +112,15 @@ dd h4 { margin:15px 0 0 0; }
 			</div>
 			<p>To make a link that goes to a an id on another page you just add the query param scrollto=idToScrollTo to the end of your link</p>
 			<div data-demo-html="true" id="scrollto2">
-				<a href="options.html?scrollto=option-highlight"><code>data-highlight="true"</code></a> 
+				<a href="options.html?scrollto=option-highlight"><code>data-highlight="true"</code></a>
 			</div>
 			<p>To Make a link that will scroll to the top of the page just set an id on your body tag of top and link to that id with data-ajax="false" <code>href="#top"</code></p>
 			<div data-demo-html="true" id="scrollto2">
-				<a href="#top" data-ajax="false">Return To Top</a> 
+				<a href="#top" data-ajax="false">Return To Top</a>
 			</div>
 			<div class="ui-body ui-body-e">
 		<h4 style="margin:.5em 0">Important: The rest of the page is just example usage</h4>
-		<p>This page is not a refrence for the slider widget it is just sample content do not refrence this page for slider widget usage! For the slider widget please see <a href="http://api.jquerymobile.com/slider/" title="Permalink to Slider Widget" rel="bookmark">Slider Widget</a></p></div>
+		<p>This page is not a refrence for the slider widget it is just sample content do not refrence this page for slider widget usage! For the slider widget please see <a href="https://api.jquerymobile.com/slider/" title="Permalink to Slider Widget" rel="bookmark">Slider Widget</a></p></div>
 		<form action="#" method="get">
 			<h2>Slider</h2>
 
@@ -131,13 +131,13 @@ dd h4 { margin:15px 0 0 0; }
 				<a href="events.html" data-role="button" data-transition="fade">Events</a>
 			</div>
 			<div>
-				Jump To: 
-				<a href="#step-increment" data-ajax="false" >Step Increment</a>, 
-				<a href="#fill-highlight" data-ajax="false" >Fill Highlight</a>, 
-				<a href="#mini-version" data-ajax="false" >Mini version</a>, 
-				<a href="#field-containers" data-ajax="false" >Field Containers</a>, 
-				<a href="#calling-slider" data-ajax="false" >Calling the slider</a>, 
-				<a href="#theme-slider" data-ajax="false" >Theming the slider</a> 
+				Jump To:
+				<a href="#step-increment" data-ajax="false" >Step Increment</a>,
+				<a href="#fill-highlight" data-ajax="false" >Fill Highlight</a>,
+				<a href="#mini-version" data-ajax="false" >Mini version</a>,
+				<a href="#field-containers" data-ajax="false" >Field Containers</a>,
+				<a href="#calling-slider" data-ajax="false" >Calling the slider</a>,
+				<a href="#theme-slider" data-ajax="false" >Theming the slider</a>
 			</div>
 			<p>To add a slider widget to your page, use a standard <code>input</code> with the <code>type="range"</code> attribute.  The input's <code>value</code> is used to configure the starting position of the handle and the value is populated in the text input. Specify <code>min</code> and <code>max</code> attribute values to set the slider's range. If you want to constrain input to specific increments, add the <code>step</code> attribute. Set the <code>value</code> attribute to define the initial value. The framework will parse these attributes to configure the slider widget. View the <a href="../../api/data-attributes.html">data- attribute reference</a> to see all the possible attributes you can add to sliders.</p>
 
@@ -167,7 +167,7 @@ dd h4 { margin:15px 0 0 0; }
 				<p>This will produce an input that snaps to increments of 50. If a value is added to the input that isn't valid with the step increment, the value will be reset on blur to the closest step.</p>
 		        <label for="slider-step">Input slider:</label>
 				<input type="range" name="slider-step" id="slider-step" value="150" min="0" max="500" step="50" />
-				
+
 				<br/><br/><a href="#top" data-ajax="false">return to top</a>
 				<h2 id="fill-highlight">Fill highlight</h2>
 
@@ -180,7 +180,7 @@ dd h4 { margin:15px 0 0 0; }
 
 		        <label for="slider-fill">Input slider:</label>
 				<input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="100" data-highlight="true" />
-	
+
 				<br/><br/><a href="#top" data-ajax="false">return to top</a>
 				<h2 id="mini-version">Mini version</h2>
 
@@ -196,7 +196,7 @@ dd h4 { margin:15px 0 0 0; }
 				<input type="range" name="slider-mini" id="slider-mini" value="25" min="0" max="100" data-highlight="true" data-mini="true" />
 				<br/><br/><a href="#top" data-ajax="false">return to top</a>
 				<h2 id="field-containers">Field containers</h2>
-					
+
 				<p>Optionally wrap the slider markup in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form. In this example, the <code>step</code> attribute is omitted to allow any whole number value to be selected.</p>
 
 

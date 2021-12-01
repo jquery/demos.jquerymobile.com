@@ -4,11 +4,11 @@
 <div data-role="page">
         <div data-role="header">
 				<h1>.ajaxSend()</h1>
-  				
+
 </div>
 <div data-role="content" data-theme="c" id="ajaxSend1">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.ajaxSend( handler(event, XMLHttpRequest, ajaxOptions) )</span> <span class="returns">Returns: <a class="return" href="http://docs.jquery.com/Types#jQuery">jQuery</a></span>
+<span class="name">.ajaxSend( handler(event, XMLHttpRequest, ajaxOptions) )</span> <span class="returns">Returns: <a class="return" href="https://docs.jquery.com/Types#jQuery">jQuery</a></span>
 </h2>
 <div class="  entry-details">
 <p class="desc"><strong>Description: </strong></p>
@@ -33,7 +33,7 @@
 });</pre>
 <p>When the user clicks the button and the Ajax request is about to begin, the log message is displayed.</p>
 <p><strong>Note:</strong> Because <code>.ajaxSend()</code> is implemented as a method of jQuery instances, we can use the <code>this</code> keyword as we do here to refer to the selected elements within the callback function.</p>
-<p>All <code>ajaxSend</code> handlers are invoked, regardless of what Ajax request is to be sent. If we must differentiate between the requests, we can use the parameters passed to the handler. Each time an <code>ajaxSend</code> handler is executed, it is passed the event object, the <code>XMLHttpRequest</code> object, and the <a href="http://api.jquery.com/jQuery.ajax/">settings object</a> that was used in the creation of the Ajax request. For example, we can restrict our callback to only handling events dealing with a particular URL:</p>
+<p>All <code>ajaxSend</code> handlers are invoked, regardless of what Ajax request is to be sent. If we must differentiate between the requests, we can use the parameters passed to the handler. Each time an <code>ajaxSend</code> handler is executed, it is passed the event object, the <code>XMLHttpRequest</code> object, and the <a href="https://api.jquery.com/jQuery.ajax/">settings object</a> that was used in the creation of the Ajax request. For example, we can restrict our callback to only handling events dealing with a particular URL:</p>
 <pre>$('.log').ajaxSend(function(e, xhr, settings) {
   if (settings.url == 'ajax/test.html') {
     $(this).text('Triggered ajaxSend handler.');

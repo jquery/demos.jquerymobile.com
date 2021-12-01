@@ -4,5 +4,5 @@
 	header("Expires: $ts");
 	header("Pragma: cache");
 	header("Cache-Control: max-age=$seconds_to_cache");
-	echo file_get_contents( "http://api.jquerymobile.com/resources/api.xml" );
+	echo file_get_contents( "https://api.jquerymobile.com/resources/api.xml" );
 ?>

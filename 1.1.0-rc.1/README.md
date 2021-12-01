@@ -1,8 +1,8 @@
 jQuery Mobile Framework
 =======================
-[Official Site: http://jquerymobile.com](http://jquerymobile.com)
+[Official Site: https://jquerymobile.com](https://jquerymobile.com)
 
-[Demos and Documentation](http://jquerymobile.com/test/)
+[Demos and Documentation](https://jquerymobile.com/test/)
 
 How to build your own jQuery Mobile CSS and JS files
 ====================================================
@@ -36,7 +36,7 @@ If you think you've found a bug, please report it by following these instruction
         * Browser/device (with version #)
         * The version of the jQuery Mobile code you're running
         * If you are running from a git version, include the date and/or hash number
-    - Make sure that the bug still exists at http://jquerymobile.com/test/ as it may be fixed already
+    - Make sure that the bug still exists at https://jquerymobile.com/test/ as it may be fixed already
     - You can use the CDN hosted JS and CSS files to test in your own code by using:
         * [JS](https://code.jquery.com/mobile/latest/jquery.mobile.min.js)
         * [CSS](https://code.jquery.com/mobile/latest/jquery.mobile.min.css)

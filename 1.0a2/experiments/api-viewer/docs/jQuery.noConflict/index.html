@@ -4,11 +4,11 @@
 <div data-role="page">
         <div data-role="header">
 				<h1>jQuery.noConflict()</h1>
-  				
+
 </div>
 <div data-role="content" data-theme="c" id="jQuery.noConflict1">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.noConflict( [ removeAll ] )</span> <span class="returns">Returns: <a class="return" href="http://docs.jquery.com/Types#Object">Object</a></span>
+<span class="name">jQuery.noConflict( [ removeAll ] )</span> <span class="returns">Returns: <a class="return" href="https://docs.jquery.com/Types#Object">Object</a></span>
 </h2>
 <div class="  entry-details">
 <p class="desc"><strong>Description: </strong>Relinquish jQuery's control of the $ variable.</p>
@@ -53,12 +53,12 @@ jQuery("div p").hide();
 $("content").style.display = 'none';</code></pre>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Reverts the $ alias and then creates and executes a function to provide the $ as a jQuery alias inside the functions scope. Inside the function the original $ object is not available. This works well for most plugins that don't rely on any other library.  
+<h4>Example: <span class="desc">Reverts the $ alias and then creates and executes a function to provide the $ as a jQuery alias inside the functions scope. Inside the function the original $ object is not available. This works well for most plugins that don't rely on any other library.
 
 </span>
 </h4>
 <pre><code class="example">jQuery.noConflict();
-(function($) { 
+(function($) {
   $(function() {
     // more code using $ as alias to jQuery
   });
@@ -71,7 +71,7 @@ $("content").style.display = 'none';</code></pre>
 </h4>
 <pre><code class="example">jQuery.noConflict()(function(){
     // code using jQuery
-}); 
+});
 // other code using $ as an alias to the other library</code></pre>
 </div>
 <div id="example-3">

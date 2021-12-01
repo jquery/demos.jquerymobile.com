@@ -1,18 +1,18 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 	<head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>jQuery Mobile Docs - Transitions</title> 
-	<link rel="stylesheet"  href="../../css/themes/default/jquery.mobile.css" />  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile Docs - Transitions</title>
+	<link rel="stylesheet"  href="../../css/themes/default/jquery.mobile.css" />
 	<link rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
 
 	<script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="../../docs/_assets/js/jqm-docs.js"></script>
 	<script src="../../js/jquery.mobile.docs.js"></script>
 
-</head> 
-<body> 
+</head>
+<body>
 
 	<div data-role="page" class="type-interior">
 
@@ -23,7 +23,7 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<div class="content-primary">		
+		<div class="content-primary">
 
 				<h2>Creating custom CSS-based transitions</h2>
 
@@ -101,8 +101,8 @@
 				</code></pre>
 
 				<p>If you need to specify a different easing or duration, simply add the appropriate CSS3 property to your custom page transition rules.</p>
-				
-				
+
+
 		<h2>Creating custom JavaScript-based transitions</h2>
 
 		<p>When a user clicks on a link within a page, jQuery Mobile checks if the link specifies a <code>@data-transition</code> attribute. The value of this attribute is the name of the transition to use when displaying the page referred to by the link. If there is no <code>@data-transition</code> attribute, the transition name specified by the configuration option <code>$.mobile.defaultPageTransition</code> is used for pages, and <code>$.mobile.defaultDialogTransition</code> is used for dialogs.</p>
@@ -137,7 +137,7 @@ $.mobile.transitionHandlers[ "default" ];
 }
 		</code></pre>
 
-		<p>Your handler must create a Deferred object and return a promise to the caller. The promise is used to communicate to the caller when your transition is actually complete. It is up to you to call <code>deferred.resolve()</code> at the correct time. If you are new to Deferred objects, you can find documentation <a href="http://api.jquery.com/category/deferred-object/" rel="nofollow">here</a>.</p>
+		<p>Your handler must create a Deferred object and return a promise to the caller. The promise is used to communicate to the caller when your transition is actually complete. It is up to you to call <code>deferred.resolve()</code> at the correct time. If you are new to Deferred objects, you can find documentation <a href="https://api.jquery.com/category/deferred-object/" rel="nofollow">here</a>.</p>
 
 		<h3>Registering and Invoking Your Transition Handler</h3>
 
@@ -219,15 +219,15 @@ $.mobile.defaultTransitionHandler = myTransitionHandler;
 		</code></pre>
 
 		<p>Once you do this, your handler will be invoked any time a transition name is used but not found within the <code>$.mobile.transitionHandlers</code> dictionary.</p>
-		
+
 		<h2>A model for Custom transition handler development</h2>
 		<p>Transition handlers involve a number of critical operations, such as hiding any existing page, showing the new page, scrolling either to the top or a remembered scroll position on that new page, setting focus on the new page, and any animation and timing sequences you'd like to add. During development, we would recommend using <code>jquery.mobile.transitions.js</code> as a coding reference.</p>
-			
+
 		<h2>Transitions and scroll position</h2>
 		<p>One of the key things jQuery Mobile does is store your scroll position before starting a transition so it can restore you to the same place once you return to the page when hitting the Back button or closing a dialog. Here are the same buttons from the top to test the scrolling logic.</p>
-		
-	
-		</div><!--/content-primary -->		
+
+
+		</div><!--/content-primary -->
 
 		<div class="content-secondary">
 
@@ -253,10 +253,10 @@ $.mobile.defaultTransitionHandler = myTransitionHandler;
 						<li><a href="pages-themes.html">Theming pages</a></li>
 					</ul>
 			</div>
-		</div>		
+		</div>
 
 	</div><!-- /content -->
-	
+
 </body>
 </html>
 

@@ -8,7 +8,7 @@
 </div>
 <div data-role="content" data-theme="c" id="animate1">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.animate( properties, [ duration ], [ easing ], [ callback ] )</span> <span class="returns">Returns: <a class="return" href="http://docs.jquery.com/Types#jQuery">jQuery</a></span>
+<span class="name">.animate( properties, [ duration ], [ easing ], [ callback ] )</span> <span class="returns">Returns: <a class="return" href="https://docs.jquery.com/Types#jQuery">jQuery</a></span>
 </h2>
 <div class="  entry-details">
 <p class="desc"><strong>Description: </strong>Perform a custom animation of a set of CSS properties.</p>
@@ -70,16 +70,16 @@
 });
 </pre>
 <p class="image">
-  <img src="http://api.jquery.com/images/animate-1.jpg" alt=""></p>
+  <img src="https://api.jquery.com/images/animate-1.jpg" alt=""></p>
 <p>Note that we have specified <code>toggle</code> as the target value of the <code>height</code> property. Since the image was visible before, the animation shrinks the height to 0 to hide it. A second click then reverses this transition:
 </p>
 <p class="image">
-<img src="http://api.jquery.com/images/animate-2.jpg" alt=""></p>
+<img src="https://api.jquery.com/images/animate-2.jpg" alt=""></p>
 <p>The <code>opacity</code> of the image is already at its target value, so this property is not animated by the second click. Since we specified the target value for <code>left</code> as a relative value, the image moves even farther to the right during this second animation.</p>
 <p>The <code>position</code> attribute of the element must not be <code>static</code> if we wish to animate the <code>left</code> property as we do in the example.</p>
-<blockquote><p>The <a href="http://jqueryui.com">jQuery UI</a> project extends the <code>.animate()</code> method by allowing some non-numeric styles such as colors to be animated. The project also includes mechanisms for specifying animations through CSS classes rather than individual attributes.</p></blockquote>
+<blockquote><p>The <a href="https://jqueryui.com">jQuery UI</a> project extends the <code>.animate()</code> method by allowing some non-numeric styles such as colors to be animated. The project also includes mechanisms for specifying animations through CSS classes rather than individual attributes.</p></blockquote>
 <h4 id="easing">Easing</h4>
-<p>The remaining parameter of <code>.animate()</code> is a string naming an easing function to use. An easing function specifies the speed at which the animation progresses at different points within the animation. The only easing implementations in the jQuery library are the default, called <code>swing</code>, and one that progresses at a constant pace, called <code>linear</code>. More easing functions are available with the use of plug-ins, most notably the <a href="http://jqueryui.com/">jQuery UI suite</a>.</p>
+<p>The remaining parameter of <code>.animate()</code> is a string naming an easing function to use. An easing function specifies the speed at which the animation progresses at different points within the animation. The only easing implementations in the jQuery library are the default, called <code>swing</code>, and one that progresses at a constant pace, called <code>linear</code>. More easing functions are available with the use of plug-ins, most notably the <a href="https://jqueryui.com/">jQuery UI suite</a>.</p>
 <h4 id="per-property-easing">Per-property Easing</h4>
 <p>As of jQuery version 1.4, we can set per-property easing functions within a single <code>.animate()</code> call. In the first version of <code>.animate()</code>, each property can take an array as its value: The first member of the array is the CSS property and the second member is an easing function.  If a per-property easing function is not defined for a particular property, it uses the value of the <code>.animate()</code> method's optional easing argument. If the easing argument is not defined, the default <code>swing</code> function is used.</p>
 <p>We can, for example, simultaneously animate the width and height with the <code>swing</code> easing function and the opacity with the <code>linear</code> easing function:</p>

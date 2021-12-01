@@ -1,18 +1,18 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 	<head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>jQuery Mobile Docs - Transitions</title> 
-	<link rel="stylesheet"  href="../../css/themes/default/jquery.mobile-1.2.0-alpha.1.css" />  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile Docs - Transitions</title>
+	<link rel="stylesheet"  href="../../css/themes/default/jquery.mobile-1.2.0-alpha.1.css" />
 	<link rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
 
 	<script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="../../docs/_assets/js/jqm-docs.js"></script>
 	<script src="../../js/jquery.mobile-1.2.0-alpha.1.js"></script>
 
-</head> 
-<body> 
+</head>
+<body>
 
 	<div data-role="page" class="type-interior">
 
@@ -23,7 +23,7 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<div class="content-primary">		
+		<div class="content-primary">
 
 				<h2>Creating custom CSS-based transitions</h2>
 
@@ -37,7 +37,7 @@
 			-webkit-animation-name: slideinfromright;
 			-moz-animation-name: slideinfromright;
 		}
-			
+
 		.slide.out {
 			-webkit-transform: translateX(-100%);
 			-moz-transform: translateX(-100%);
@@ -49,22 +49,22 @@
 			from { -webkit-transform: translateX(100%); }
 			to { -webkit-transform: translateX(0); }
 		}
-		
+
 		@-webkit-keyframes slideouttoleft {
 			from { -webkit-transform: translateX(0); }
 			to { -webkit-transform: translateX(-100%); }
 		}
-	
+
 		@-moz-keyframes slideinfromright {
 			from { -moz-transform: translateX(100%); }
 			to { -moz-transform: translateX(0); }
 		}
-		
+
 		@-moz-keyframes slideouttoleft {
 			from { -moz-transform: translateX(0); }
 			to { -moz-transform: translateX(-100%); }
 		}
-		
+
 				</code></pre>
 
 				<p>During a CSS-based page transition, jQuery Mobile will place the class name of the transition on both the "from" and "to" pages involved in the transition. It then places an "out" class on the "from" page, and "in" class on the "to" page. The presence of these classes on the "from" and "to" page elements then triggers the animation CSS rules defined above. As of jQuery Mobile version 1.1, animation class additions are queued, rather than simultaneous, producing an out-then-in sequence, which is friendlier for mobile rendering than our previous simultaneous transition sequence.</p>
@@ -95,7 +95,7 @@
 			from { -webkit-transform: translateX(0); }
 			to { -webkit-transform: translateX(100%); }
 		}
-		
+
 		@-moz-keyframes slideinfromleft {
 			from { -moz-transform: translateX(-100%); }
 			to { -moz-transform: translateX(0); }
@@ -105,7 +105,7 @@
 			from { -moz-transform: translateX(0); }
 			to { -moz-transform: translateX(100%); }
 		}
-		
+
 				</code></pre>
 
 				<p>After the CSS rules are in place, you simply specify the name of your transition within the @data-transition attribute of a navigation link:</p>
@@ -134,8 +134,8 @@
 				</code></pre>
 
 				<p>If you need to specify a different easing or duration, simply add the appropriate CSS3 property to your custom page transition rules.</p>
-				
-				
+
+
 		<h2>Creating custom JavaScript-based transitions</h2>
 
 		<p>When a user clicks on a link within a page, jQuery Mobile checks if the link specifies a <code>@data-transition</code> attribute. The value of this attribute is the name of the transition to use when displaying the page referred to by the link. If there is no <code>@data-transition</code> attribute, the transition name specified by the configuration option <code>$.mobile.defaultPageTransition</code> is used for pages, and <code>$.mobile.defaultDialogTransition</code> is used for dialogs.</p>
@@ -171,7 +171,7 @@ function myTransitionHandler(name, reverse, $to, $from)
 }
 		</code></pre>
 
-		<p>Your handler must create a Deferred object and return a promise to the caller. The promise is used to communicate to the caller when your transition is actually complete. It is up to you to call <code>deferred.resolve()</code> at the correct time. If you are new to Deferred objects, you can find documentation <a href="http://api.jquery.com/category/deferred-object/" rel="nofollow">here</a>.</p>
+		<p>Your handler must create a Deferred object and return a promise to the caller. The promise is used to communicate to the caller when your transition is actually complete. It is up to you to call <code>deferred.resolve()</code> at the correct time. If you are new to Deferred objects, you can find documentation <a href="https://api.jquery.com/category/deferred-object/" rel="nofollow">here</a>.</p>
 
 		<h3>Registering and Invoking Your Transition Handler</h3>
 
@@ -254,15 +254,15 @@ $.mobile.defaultTransitionHandler = myTransitionHandler;
 		</code></pre>
 
 		<p>Once you do this, your handler will be invoked any time a transition name is used but not found within the <code>$.mobile.transitionHandlers</code> dictionary.</p>
-		
+
 		<h2>A model for Custom transition handler development</h2>
 		<p>Transition handlers involve a number of critical operations, such as hiding any existing page, showing the new page, scrolling either to the top or a remembered scroll position on that new page, setting focus on the new page, and any animation and timing sequences you'd like to add. During development, we would recommend using <code>jquery.mobile.transitions.js</code> as a coding reference.</p>
-			
+
 		<h2>Transitions and scroll position</h2>
 		<p>One of the key things jQuery Mobile does is store your scroll position before starting a transition so it can restore you to the same place once you return to the page when hitting the Back button or closing a dialog. Here are the same buttons from the top to test the scrolling logic.</p>
-		
-	
-		</div><!--/content-primary -->		
+
+
+		</div><!--/content-primary -->
 
 		<div class="content-secondary">
 
@@ -289,7 +289,7 @@ $.mobile.defaultTransitionHandler = myTransitionHandler;
 						<li><a href="pages-themes.html">Theming pages</a></li>
 					</ul>
 			</div>
-		</div>		
+		</div>
 
 	</div><!-- /content -->
 
@@ -300,7 +300,7 @@ $.mobile.defaultTransitionHandler = myTransitionHandler;
 </div><!-- /page -->
 
 
-	
+
 </body>
 </html>
 

@@ -1,17 +1,17 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 	<head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>jQuery Mobile Docs - Transitions</title> 
-	<link rel="stylesheet"  href="../../jquery.mobile-1.0rc3.min.css" />  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile Docs - Transitions</title>
+	<link rel="stylesheet"  href="../../jquery.mobile-1.0rc3.min.css" />
 	<link rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
 	<script src="../../jquery.js"></script>
 	<script src="../../experiments/themeswitcher/jquery.mobile.themeswitcher.js"></script>
 	<script src="../_assets/js/jqm-docs.js"></script>
 	<script src="../../jquery.mobile-1.0rc3.min.js"></script>
-</head> 
-<body> 
+</head>
+<body>
 
 	<div data-role="page" class="type-interior">
 
@@ -21,8 +21,8 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<div class="content-primary">		
-		<h2>Page transitions</h2> 
+		<div class="content-primary">
+		<h2>Page transitions</h2>
 
 		<p>The jQuery Mobile framework includes a set of six CSS-based transition effects that can be applied to any page link or form submission with Ajax navigation: </p>
 
@@ -51,15 +51,15 @@
 <code><code>
 &lt;a href=&quot;index.html&quot; <strong>data-transition=&quot;pop&quot;</strong>&gt;I'll pop&lt;/a&gt;
 </code></code>
-		
+
 		<p>When the Back button is pressed, the framework will automatically apply the reverse version of the transition that was used to show the page. To specify that the reverse version of a transition should be used, add the <code>data-direction="reverse"</code> attribute to a link. Note: (this was formerly <code>data-back="true"</code>, which will remain supported until 1.0)</p>
-		
+
 		<p>For smoother page transitions, consider enabling the <a href="touchoverflow.html">touchOverflow</a> feature.</p>
-		
+
 		<h2>Global configuration of transitions</h2>
-		
+
 		<p>Set the <code>defaultPageTransition</code> <a href="../api/globalconfig.html">global option</a> if you'd prefer a different default transition. Dialogs have a different option called <code>defaultDialogTransition</code> that can also set configured.</p>
-		
+
 
 
 
@@ -166,7 +166,7 @@ $.mobile.css3TransitionHandler
 }
 		</code></pre>
 
-		<p>Your handler must create a Deferred object and return a promise to the caller. The promise is used to communicate to the caller when your transition is actually complete. It is up to you to call <code>deferred.resolve()</code> at the correct time. If you are new to Deferred objects, you can find documentation <a href="http://api.jquery.com/category/deferred-object/" rel="nofollow">here</a>.</p>
+		<p>Your handler must create a Deferred object and return a promise to the caller. The promise is used to communicate to the caller when your transition is actually complete. It is up to you to call <code>deferred.resolve()</code> at the correct time. If you are new to Deferred objects, you can find documentation <a href="https://api.jquery.com/category/deferred-object/" rel="nofollow">here</a>.</p>
 
 		<h3>Registering and Invoking Your Transition Handler</h3>
 
@@ -248,9 +248,9 @@ $.mobile.defaultTransitionHandler = myTransitionHandler;
 		</code></pre>
 
 		<p>Once you do this, your handler will be invoked any time a transition name is used but not found within the <code>$.mobile.transitionHandlers</code> dictionary.</p>
-			
 
-				</div><!--/content-primary -->		
+
+				</div><!--/content-primary -->
 
 				<div class="content-secondary">
 
@@ -276,7 +276,7 @@ $.mobile.defaultTransitionHandler = myTransitionHandler;
 								<li><a href="pages-themes.html">Theming pages</a></li>
 							</ul>
 					</div>
-				</div>		
+				</div>
 
 			</div><!-- /content -->
 
@@ -285,11 +285,11 @@ $.mobile.defaultTransitionHandler = myTransitionHandler;
 			</div>
 
 			</div><!-- /page -->
-			
-			
-			
-			
-			
+
+
+
+
+
 			<div data-role="page" id="dialog"><!-- dialog-->
 
 				<div data-role="header" data-theme="e">
@@ -300,7 +300,7 @@ $.mobile.defaultTransitionHandler = myTransitionHandler;
 					<p>That was an animated page transition effect that we added with a <code>data-transition</code> attribute on the link.</p>
 					<p>Since it uses CSS transforms, this should be hardware accelerated on many mobile devices.</p>
 					<p>What do you think?</p>
-					<a href="docs-transitions.html" data-role="button" data-theme="b" data-rel="back">I like it</a>   
+					<a href="docs-transitions.html" data-role="button" data-theme="b" data-rel="back">I like it</a>
 				</div>
 			</div>
 

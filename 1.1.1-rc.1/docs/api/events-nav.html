@@ -10,7 +10,7 @@
 	<script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="../../docs/_assets/js/jqm-docs.js"></script>
 	<script src="../../js/jquery.mobile-1.1.1-rc.1.js"></script>
-	
+
 </head>
 <body>
 
@@ -24,15 +24,15 @@
 
 	<div data-role="content">
 		<div class="content-primary">
-		
+
 		<h2>Framework, Page, and Navigation Events</h2>
 		<p>jQuery Mobile's widget and navigation system has a full set of events at each stage of the page load and page change process that can be tapped into to take full control. This page will highlight the most commonly used events and what they do, and also provide chronologies of when these events are triggered during load and transitions.</p>
-		
-		
+
+
 		<h3>Framework events</h3>
-		
+
 		<p>When jQuery Mobile initializes, it triggers an event on the <code>document</code> that is specifically designed for overriding framework and plugin defaults. That event is called <code>mobileinit</code>, and by binding to it, you can ensure that any global or plugin configuration options are overridden to any value you'd like before they are used by the framework's initial execution. </p>
-		
+
 
 			<pre>
 				<code>
@@ -41,72 +41,72 @@ $(document).bind("mobileinit", function(){
 });
 				</code>
 			</pre>
-		
+
 		<p>The tricky aspect of mobileinit is that you need to bind to it before jQuery Mobile executes, so a typical mobileinit workflow would occur in a script that is referenced after jQuery itself, but before jQuery Mobile.</p>
-		
+
 		<p>It should be noted that while you can bind to other events from within a <code>mobileinit</code> callback, it is likely that you'll get undesirable results in doing so. This is because many events, such as the page events below, are intended for external developers to use <em>after</em> jQuery Mobile's plugins have loaded.</p>
-		
+
 		<h3>Page creation events</h3>
-		
+
 		<p>In a jQuery Mobile application, each  view is known as a page. Pages generally begin as a regular HTML element with a <code>data-role="page"</code> attribute, and the framework's page widget enhances that element into a jQuery Mobile page control. In the process of enhancing that page, the widget dispatches several events that allow you to access that page and its child elements at different stages of creation.</p>
-		
+
 			<p>These events are:</p>
-		
+
 		<dl>
 				<dt>pagecreate</dt>
-				
+
 				<dd>This event is triggered on a page when it is first initialized by the page plugin. <code>pagecreate</code> is the most useful event for progressively enhancing a page's markup when it first loads, and because of this, many of jQuery Mobile's standard widgets bind to <code>pagecreate</code> to enhance markup within pages as well! If you bind to <code>pagecreate</code> in any script that is referenced after the jQuery Mobile framework, any native jQuery Mobile widgets in that page will be enhanced before your event callback executes. In other words, you'll be dealing with enhanced jQuery Mobile components.</dd>
-				
+
 				<dt>pagebeforecreate</dt>
-				
+
 				<dd>This event is triggered on a page element just before it is created by the page plugin. While the <code>pagecreate</code> event generally allows you to work with a page <strong>after</strong> its markup has been enhanced by jQuery Mobile, <code>pagebeforecreate</code> gives you access when the markup has not yet been enhanced. <code>pagebeforecreate</code> is useful for modifying markup before jQuery Mobile's widgets </dd>
-				
+
 				<dt>pageinit</dt>
-				
+
 				<dd><code>pageinit</code> is very similar to <code>pagecreate</code>, except that none of jQuery Mobile's standard widgets bind to it, and it is guaranteed to execute after all bound <code>pagecreate</code> callbacks have finished. If you need to bind to a page creation-time event via a script that is referenced before jQuery Mobile, binding to <code>pageinit</code> will ensure that you deal with enhanced page controls (whereas <code>pagecreate</code> will not, in that specific case.)</dd>
-				
-				
+
+
 		</dl>
-		
-		
+
+
 		<h3>Page navigation events</h3>
 		<p>After pages are created, they are often shown and hidden one or many times throughout the use of a jQuery Mobile app. For A-grade browsers with Ajax navigation support, the jQM navigation model manages these page behaviors and dispatches useful events at different steps in the process of showing, hiding, and changing.</p>
-		
+
 		<h4>Page showing events</h4>
 		<p>The page showing events (<code>pagebeforeshow</code> and <code>pageshow</code>) are guaranteed to fire every time a page is shown, whether you're opening a single page, or transitioning between two pages. The target of the event is the page that is being shown.</p>
-		
-		<dl> 
-			
+
+		<dl>
+
 			<dt>pagebeforeshow</dt>
 			<dd>An event triggered on a page before it is shown.</dd>
-			
-		
+
+
 			<dt>pageshow</dt>
 			<dd>An event triggered on the page after it is shown.</dd>
-		</dl>	
-		
+		</dl>
+
 		<h4>Page hiding events</h4>
 		<p>The page hiding events (<code>pagebeforehide</code> and <code>pagehide</code>) only fire when transitioning between two pages, when an outgoing page is being hidden in favor of a new one. The target of the event is the page that is being shown.</p>
-		<dl>	
+		<dl>
 			<dt>pagebeforehide</dt>
 			<dd>An event triggered on a page before it is hidden.</dd>
-			
-			
+
+
 			<dt>pagehide</dt>
 			<dd>An event triggered on a page after it is hidden.</dd>
-			
+
 		<dl>
-			
-			
+
+
 		<p>When a single page is being shown, and no page is hidden, only the	<code>pagebeforeshow</code> and <code>pageshow</code> events will fire, and in that order.</p>
-		
+
 		<p>During a transition between two pages, all 4 of the events above will fire, in this order:</p>
 		<style>
 		.nav-flow ol,  .nav-flow li { margin:0; list-style-type: none; text-align:center; line-height:150%; }
 		.nav-flow h3 { margin:0; }
 		.nav-flow em { color:#999; }
-		</style>	
-		
+		</style>
+
 		<ol class="nav-flow">
 			<li><h3>pagebeforehide</h3></li>
 			<li>&darr;</li>
@@ -116,21 +116,21 @@ $(document).bind("mobileinit", function(){
 			<li>&darr;</li>
 			<li><h3>pageshow</h3></li>
 		</ol>
-		
-		
-		
-			
-		
+
+
+
+
+
 		<h3>Chronology</h3>
-		
-		
-		
-		
+
+
+
+
 		<p>Here is an overview of the event chronology for a page change</p>
-		
-		
-		
-		
+
+
+
+
 		<ol class="nav-flow">
 			<li><h3>mobileinit</h3> <em>Set global options here</em></li>
 			<li>&darr;</li>
@@ -172,7 +172,7 @@ $(document).bind("mobileinit", function(){
    <p> Prior to Beta 2 the recommendation to users wishing to manipulate jQuery Mobile enhanced page and child widget markup was to bind to the <code>pagecreate</code> event. In Beta 2 an internal change was made to decouple each of the widgets by binding to the <code>pagecreate</code> event in place of direct calls to the widget methods. As a result, users binding to the <code>pagecreate</code> from within <code>mobileinit</code> would find their binding executing before the markup had been enhanced by each of the plugins. In keeping with the lifecycle of the jQuery UI Widget Factory, the initialization method is invoked <strong>after</strong> the create method, so the <code>pageinit</code> event provides the correct timing for post enhancement manipulation of the DOM and/or Javascript objects.</p>
 </div>
 
-		
+
 
 		<h2>Page load events</h2>
         <p>Whenever an external page is loaded into the application DOM, 2 events are fired. The first is <code>pagebeforeload</code>. The 2nd event will be either <code>pageload</code> or <code>pageloadfailed</code>.</p>
@@ -271,7 +271,7 @@ $( document ).bind( &quot;pagebeforeload&quot;, function( event, data ){
             	</li>
             	<li><code>textStatus</code> (null or string)
             	  <ul>
-            	    <li>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, this will be a string describing the status. This is what gets passed as the 2nd argument to the framework's $.ajax() error callback.</li>
+            	    <li>According to the jQuery Core <a href="https://api.jquery.com/jQuery.ajax/">documentation</a>, this will be a string describing the status. This is what gets passed as the 2nd argument to the framework's $.ajax() error callback.</li>
           	    </ul>
             	</li>
            	  </ul>
@@ -345,12 +345,12 @@ $( document ).bind( &quot;pageloadfailed&quot;, function( event, data ){
             	</li>
             	<li><code>textStatus</code> (null or string)
             	  <ul>
-            	    <li>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, possible values for this property, aside from null, are &quot;timeout&quot;, &quot;error&quot;, &quot;abort&quot;, and &quot;parsererror&quot;. This is what gets passed as the 2nd argument to the framework's $.ajax() error callback.</li>
+            	    <li>According to the jQuery Core <a href="https://api.jquery.com/jQuery.ajax/">documentation</a>, possible values for this property, aside from null, are &quot;timeout&quot;, &quot;error&quot;, &quot;abort&quot;, and &quot;parsererror&quot;. This is what gets passed as the 2nd argument to the framework's $.ajax() error callback.</li>
           	    </ul>
             	</li>
             	<li><code>errorThrown</code> (null, string, object)
             	  <ul>
-            	    <li>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, this property may be an exception object if one occured, or if an HTTP error occured this will be set to the textual portion of the HTTP status. This is what gets passed as the 3rd argument to the framework's $.ajax() error callback.</li>
+            	    <li>According to the jQuery Core <a href="https://api.jquery.com/jQuery.ajax/">documentation</a>, this property may be an exception object if one occured, or if an HTTP error occured this will be set to the textual portion of the HTTP status. This is what gets passed as the 3rd argument to the framework's $.ajax() error callback.</li>
           	    </ul>
             	</li>
            	  </ul>
