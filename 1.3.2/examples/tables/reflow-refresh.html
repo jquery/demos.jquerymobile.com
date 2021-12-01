@@ -7,7 +7,7 @@
 	<link rel="stylesheet"  href="../../css/themes/default/jquery.mobile-1.3.2.min.css">
 	<link rel="stylesheet" href="../../_assets/css/jqm-demos.css">
 	<link rel="shortcut icon" href="../../favicon.ico">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<script src="../../js/jquery.js"></script>
 	<script src="../../_assets/js/index.js"></script>
 	<script src="../../js/jquery.mobile-1.3.2.min.js"></script>
@@ -15,7 +15,7 @@
 		$( document ).on( "pageinit", function() {
 			$( document ).one( "click", "#add_and_refresh", function () {
 				var newRows = "<tr><th>6</th><td><a href=\"http://en.wikipedia.org/wiki/Dr._Strangelove\" data-rel=\"external\">Dr. Strangelove Or How I Learned to Stop Worrying and Love the Bomb</a></td><td>1964</td><td>92%</td><td>74</td></tr><tr><th>7</th><td><a href=\"http://en.wikipedia.org/wiki/The_Graduate\" data-rel=\"external\">The Graduate</a></td><td>1967</td><td>91%</td><td>122</td></tr><tr><th>8</th><td><a href=\"http://en.wikipedia.org/wiki/The_Wizard_of_Oz_(1939_film)\" data-rel=\"external\">The Wizard of Oz</a></td><td>1939</td><td>90%</td><td>72</td></tr><tr><th>9</th><td><a href=\"http://en.wikipedia.org/wiki/Singin%27_in_the_Rain' data-rel=\"external\">Singin\" in the Rain</a></td><td>1952</td><td>89%</td><td>85</td></tr><tr><th>10</th><td class=\"title\"><a href=\"http://en.wikipedia.org/wiki/Inception\" data-rel=\"external\">Inception</a></td><td>2010</td><td>84%</td><td>78</td></tr>";
-				
+
 				$( "table#table-reflow tbody" )
 					// Append the new rows to the body
 					.append( newRows )
@@ -24,8 +24,8 @@
 					.table( "refresh" )
 					// Trigger if the new injected markup contain links or buttons that need to be enhanced
 					.trigger( "create" );
-					
-				// We disable the button to make clear that in this demo we have only one set of rows to inject	
+
+				// We disable the button to make clear that in this demo we have only one set of rows to inject
 				$( "#add_and_refresh" ).button( "disable" );
 			});
 		});

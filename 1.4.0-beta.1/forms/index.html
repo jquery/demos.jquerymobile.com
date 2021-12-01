@@ -7,7 +7,7 @@
 		<link rel="stylesheet"  href="../css/themes/default/jquery.mobile-1.4.0-beta.1.min.css">
 		<link rel="stylesheet" href="../_assets/css/jqm-demos.css">
 		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 		<script src="../js/jquery.js"></script>
 		<script src="../_assets/js/index.js"></script>
 		<script src="../js/jquery.mobile-1.4.0-beta.1.min.js"></script>
@@ -350,7 +350,7 @@ $( ...new markup that contains widgets... ).appendTo( ".ui-page" ).trigger( "cre
 		<h2>Refreshing form elements</h2>
 
 		    <p>In jQuery Mobile, some enhanced form controls are simply styled (inputs), but others are custom controls (selects, sliders) built from, and kept in sync with, the native control. To programmatically update a form control with JavaScript, first manipulate the native control, then use the <code>refresh</code> method to tell the enhanced control to update itself to match the new state. Here are some examples of how to update common form controls, then call the <code>refresh</code> method:</p>
-            
+
 			<h4>Checkboxes:</h4>
 
 <pre><code>
@@ -358,13 +358,13 @@ $( "input[type='checkbox']" ).prop( "checked", true ).checkboxradio( "refresh" )
 </code></pre>
 
 		<h4>Radios:</h4>
-        
+
 <pre><code>
 $( "input[type='radio']" ).prop( "checked", true ).checkboxradio( "refresh" );
 </code></pre>
 
 		<h4>Selects:</h4>
-        
+
 <pre><code>
 var myselect = $( "#selectfoo" );
 myselect[0].selectedIndex = 3;
@@ -372,13 +372,13 @@ myselect.selectmenu( "refresh" );
 </code></pre>
 
 		<h4>Sliders:</h4>
-        
+
 <pre><code>
 $( "input[type='range']" ).val( 60 ).slider( "refresh" );
 </code></pre>
 
 		<h4>Flip switches:</h4>
-        
+
         <p>They use the slider widget.</p>
 
 <pre><code>
@@ -388,9 +388,9 @@ myswitch.slider( "refresh" );
 </code></pre>
 
 		<h2>Preventing auto-initialization of form elements</h2>
-            
+
 		<p>If you'd prefer that a particular form control be left untouched by jQuery Mobile, simply give that element the attribute <code> data-role="none"</code>. For example:</p>
-            
+
 <pre><code>
 &lt;label for=&quot;foo&quot;&gt;
 &lt;select name=&quot;foo&quot; id=&quot;foo&quot; <strong>data-role=&quot;none&quot;</strong>&gt;
@@ -401,7 +401,7 @@ myswitch.slider( "refresh" );
 </code></pre>
 
 		<p>If you'd like to prevent auto-initialization without adding attributes to your markup, you can customize the selector that is used for preventing auto-initialization by setting the page plugin's <code>keepNative</code> option (which defaults to <code>[data-role="none"]</code>). Be sure to configure this option inside an event handler bound to the <code>mobileinit</code> event, so that it applies to the first page as well as subsequent pages that are loaded.</p>
-            
+
 <pre><code>
 $( document ).bind( "mobileinit", function() {
 	<strong>$.mobile.page.prototype.options.keepNative = "select, input.foo, textarea.bar";</strong>
@@ -685,7 +685,7 @@ $( document ).bind( "mobileinit", function() {
 -->
         </ul>
 	</div><!-- /panel -->
-	
+
 	<!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
     <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="overlay" data-theme="a">
 		<div class="jqm-search">
