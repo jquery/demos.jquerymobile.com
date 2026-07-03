@@ -30,7 +30,7 @@
 
 
 			<?php
-				echo "<p> " . $_REQUEST['shipping'] . "</p>";
+				echo "<p> " . htmlspecialchars( $_REQUEST['shipping'] ?? '' ) . "</p>";
 			?>
 
 

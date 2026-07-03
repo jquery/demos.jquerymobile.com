@@ -30,7 +30,7 @@
 
 			<div class="ui-body ui-body-d ui-corner-all">
 
-			<p><?php echo isset( $_GET['shipping'] ) ? $_GET['shipping'] : ''; ?></p>
+			<p><?php echo htmlspecialchars( $_GET['shipping'] ?? '' ); ?></p>
 			
 			</div>
 			
